@@ -1,6 +1,8 @@
 # HAssistantClient
 Client of H Assistant app.
 
+[![Build Status](https://travis-ci.org/h-assistant/h-assistant-client.svg?branch=master)](https://travis-ci.org/h-assistant/h-assistant-client)
+
 ## Prerequisites
 
 - [Node 7.x](https://nodejs.org/es/) (Install it via [nvm](https://github.com/creationix/nvm))
