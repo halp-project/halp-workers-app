@@ -5,8 +5,11 @@
   "angular-cli": {},
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "lint": "ng lint"
+    "dev": "ng serve",
+    "lint": "ng lint",
+    "start": "http-server dist/",
+    "preinstall": "npm install -g http-server",
+    "postinstall": "ng build --prod"
   },
   "private": true,
   "dependencies": {
