@@ -1,7 +1,7 @@
 # Halp Workers App
 Client for Hospital Workers.
 
-[![Build Status](https://travis-ci.org/h-assistant/h-assistant-client.svg?branch=master)](https://travis-ci.org/h-assistant/h-assistant-client)
+[![Build Status](https://travis-ci.org/halp-project/halp-workers-app.svg?branch=master)](https://travis-ci.org/halp-project/halp-workers-app)
 
 ## Prerequisites
 
