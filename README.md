@@ -1,9 +1,9 @@
-# HAssistantClient
-Client of H Assistant app.
+# Halp Workers App
+Client for Hospital Workers.
 
 [![Build Status](https://travis-ci.org/h-assistant/h-assistant-client.svg?branch=master)](https://travis-ci.org/h-assistant/h-assistant-client)
 
-## Prerequisites
+## Prerequisites
 
 - [Node 7.x](https://nodejs.org/es/) (Install it via [nvm](https://github.com/creationix/nvm))
 
