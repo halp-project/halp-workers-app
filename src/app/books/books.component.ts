@@ -29,6 +29,10 @@ export class BooksComponent implements OnInit {
     });
   }
 
+  editBook(book) {
+
+  }
+
   private getDismissReason(reason: any): string {
     if (reason === ModalDismissReasons.ESC) {
       return 'by pressing ESC';
