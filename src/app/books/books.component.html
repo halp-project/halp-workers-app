@@ -19,7 +19,7 @@
     </div>
 
     <div class="navbar-box">
-        <button type="button" class="btn btn-primary">+ Add Book</button>
+        <button (click)="addNewBook()" type="button" class="btn btn-primary">+ Add Book</button>
     </div>
 
     <div class="navbar-box" id="navbar-box-avatar">
@@ -35,4 +35,4 @@
   </div>
 </nav>
 
-<app-books-grid></app-books-grid>
+<app-books-grid [newBook]='newBook'></app-books-grid>
