@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 
 import { Book } from './books-grid/book';
 
@@ -9,22 +10,32 @@ import { Book } from './books-grid/book';
 })
 export class BooksComponent implements OnInit {
   newBook: Book;
-  id: number = 7;
+  closeResult: string;
+  id = 7;
+  submitted = false;
 
-  constructor() { }
+  constructor(private modalService: NgbModal) { }
 
   ngOnInit() {
   }
 
-  addNewBook() {
-    this.id++;
-    this.newBook = {
-      id: this.id,
-      title: 'Atomic Design',
-      author: 'Brad Frost',
-      description: 'Atomic Design details all that goes into creating and maintaining robust design systems.',
-      image: 'http://atomicdesign.bradfrost.com/images/book-cover.svg'
-    };
+  onSubmit() { this.submitted = true; }
+
+  openNewBookModal(content) {
+    this.modalService.open(content).result.then((result) => {
+      this.closeResult = `Closed with: ${result}`;
+    }, (reason) => {
+      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+    });
   }
 
+  private getDismissReason(reason: any): string {
+    if (reason === ModalDismissReasons.ESC) {
+      return 'by pressing ESC';
+    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
+      return 'by clicking on a backdrop';
+    } else {
+      return  `with: ${reason}`;
+    }
+  }
 }
