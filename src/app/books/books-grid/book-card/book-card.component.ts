@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 import { Book } from '../book';
 
@@ -9,10 +9,15 @@ import { Book } from '../book';
 })
 export class BookCardComponent implements OnInit {
   @Input() book: Book;
+  @Output() _delete: EventEmitter<number> = new EventEmitter();
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  delete() {
+    this._delete.emit(this.book.id);
   }
 
 }

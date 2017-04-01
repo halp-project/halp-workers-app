@@ -25,6 +25,10 @@ export class BooksGridComponent implements OnInit, OnChanges {
     }
   }
 
+  deleteBook(bookId) {
+    this.books.splice(bookId, 1);
+  }
+
   books: Book[] = [
     {
       id: 1,
