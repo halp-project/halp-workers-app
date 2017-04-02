@@ -1,0 +1,21 @@
+#image-avatar-navbar {
+    height: 30px;
+    width: 30px;
+}
+
+.navbar-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+}
+
+.navbar-icon {
+    height: 30px;
+    width: 30px;
+    color: black;
+}
+
+#navbar-box-logout-icon {
+    margin-right: 0px !important;
+}
