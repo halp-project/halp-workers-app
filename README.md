@@ -26,5 +26,5 @@ ng help // Angular CLI helper
 ```
 
 ## Contribution Guides
-### Commits
+### Commits
 Use `git cz` instead of `git commit`
