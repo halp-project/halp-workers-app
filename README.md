@@ -24,3 +24,7 @@ More [Angular CLI](https://cli.angular.io/) commands
 ng generate component component-name // Generate a new Angular component 
 ng help // Angular CLI helper 
 ```
+
+## Contribution Guides
+### Commits
+Use `git cz` instead of `git commit`
