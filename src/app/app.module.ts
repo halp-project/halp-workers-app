@@ -6,6 +6,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AuthModule } from './auth/auth.module';
+import { SignupModule } from './signup/signup.module';
 import { BooksModule } from './books/books.module';
 
 import { AppComponent } from './app.component';
@@ -18,10 +19,11 @@ import { AppComponent } from './app.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    BooksModule,
+    BooksModule,    
+    SignupModule,
     AuthModule,
     AppRoutingModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
