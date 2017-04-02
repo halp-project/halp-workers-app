@@ -1,6 +1,6 @@
-#button-login {
+
+#button-register {
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 45%;
+    transform: translate(0, +5%);
 }

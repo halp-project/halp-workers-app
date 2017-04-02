@@ -1,1 +1,36 @@
-<button routerLink="../books" routerLinkActive="active" type="button" class="btn btn-primary" id="button-login">Login</button>
+
+
+
+
+<div class="container">
+
+
+    <h1>Halp <button routerLink="../signup" routerLinkActive="active" type="button" class="btn btn-primary" id="button-register">Sign up</button></h1>
+
+
+    <form>
+      <div class="form-group">
+        <label for="name">Username</label>
+        <input type="text" class="form-control" id="name" required>
+      </div>
+      <div class="form-group">
+        <label for="alterEgo">Password</label>
+        <input type="password" class="form-control" id="pass" required>
+      </div>
+      <button routerLink="../books" routerLinkActive="active" type="submit" class="btn btn-success">Login</button>
+    </form>
+</div>
+
+<!--
+POSIBLE SELECTOR PARA EL TIPO DE ADMINISTRADOR
+
+<div class="form-group">
+  <label for="power">Hero Power</label>
+  <select class="form-control" id="power" required>
+    <option *ngFor="let pow of powers" [value]="pow">{{pow}}</option>
+  </select>
+</div>
+
+
+
+-->
