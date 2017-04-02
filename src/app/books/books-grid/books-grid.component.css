@@ -1,0 +1,23 @@
+.activity-content {
+}
+
+.book-box, .activity-content {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    margin: 1.5em 0em;
+}
+
+.book-box {
+    min-width: 200px;
+}
+
+.row-centered {
+    text-align:center;
+}
+
+.col-centered {
+    display:inline-block;
+    float:none;
+    text-align:left;
+}

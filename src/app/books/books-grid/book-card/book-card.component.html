@@ -1,0 +1,52 @@
+<div class="card">
+  <div class="book-image-box">
+    <img class="card-img-top book-image" [src]='book.image' alt="Card image cap">
+  </div>
+  <div class="card-block">
+    <h4 class="card-title">{{ book.id }} {{ book.title }}</h4>
+    <p class="card-text">{{ book.author }}</p>
+    <button (click)="edit(content)" type="button" class="btn btn-primary">
+      <i class="fa fa-pencil" aria-hidden="true"></i> Edit
+    </button>
+    <button (click)="delete()" type="button" class="btn btn-danger">
+      <i class="fa fa-trash-o" aria-hidden="true"></i> Delete
+    </button>
+  </div>
+</div>
+
+<template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">Edit book</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="form-group">
+        <label for="id">ID</label>
+        <input type="text" class="form-control" id="id" [value]="book.id" required>
+      </div>
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" class="form-control" id="title" [value]="book.title" required>
+      </div>
+      <div class="form-group">
+        <label for="author">Author</label>
+        <input type="text" class="form-control" id="author" [value]="book.author" required>
+      </div>
+      <div class="form-group">
+        <label for="description">Description</label>
+        <input type="text" class="form-control" id="description" [value]="book.description" required>
+      </div>
+      <div class="form-group">
+        <label for="image">Image</label>
+        <input type="text" class="form-control" id="image" [value]="book.image" required>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="c('Close click')">Close</button>
+    <button type="button" class="btn btn-success" (click)="c('Close click')">Save</button>
+  </div>
+</template>
