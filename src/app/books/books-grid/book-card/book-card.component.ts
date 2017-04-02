@@ -10,7 +10,6 @@ import { Book } from '../book';
 export class BookCardComponent implements OnInit {
   @Input() book: Book;
   @Output() _delete: EventEmitter<number> = new EventEmitter();
-  @Output() _edit: EventEmitter<Book> = new EventEmitter();
 
   constructor() { }
 
@@ -21,7 +20,4 @@ export class BookCardComponent implements OnInit {
     this._delete.emit(this.book.id);
   }
 
-  edit() {
-    this._edit.emit(this.book);
-  }
 }
