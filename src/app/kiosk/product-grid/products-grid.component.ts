@@ -32,57 +32,57 @@ export class ProductsGridComponent implements OnInit, OnChanges {
   products: Product[] = [
     {
       id: 1,
-      title: 'Atomic Design',
-      description: 'Atomic Design details all that goes into creating and maintaining robust design systems.',
-      image: 'http://atomicdesign.bradfrost.com/images/book-cover.svg',
+      title: 'The Times',
+      description: 'The Times is a British daily newspaper. It began in 1785 under the title The Daily Universal Register, adopting its current name on 1 January 1788. ',
+      image: 'http://www.archive.researchstudios.com/home/003-projects/times/TheTimes-Front-2.jpg',
       price: 1,
       quantity: 150
     },
     {
       id: 2,
-      title: 'Atomic Design',
-      description: 'Atomic Design details all that goes into creating and maintaining robust design systems.',
-      image: 'http://atomicdesign.bradfrost.com/images/book-cover.svg',
+      title: 'The Times',
+      description: 'The Times is a British daily newspaper. It began in 1785 under the title The Daily Universal Register, adopting its current name on 1 January 1788. ',
+      image: 'http://www.archive.researchstudios.com/home/003-projects/times/TheTimes-Front-2.jpg',
       price: 1,
       quantity: 150
     },
     {
       id: 3,
-      title: 'Atomic Design',
-      description: 'Atomic Design details all that goes into creating and maintaining robust design systems.',
-      image: 'http://atomicdesign.bradfrost.com/images/book-cover.svg',
+      title: 'The Times',
+      description: 'The Times is a British daily newspaper. It began in 1785 under the title The Daily Universal Register, adopting its current name on 1 January 1788. ',
+      image: 'http://www.archive.researchstudios.com/home/003-projects/times/TheTimes-Front-2.jpg',
       price: 1,
       quantity: 150
     },
     {
       id: 4,
-      title: 'Atomic Design',
-      description: 'Atomic Design details all that goes into creating and maintaining robust design systems.',
-      image: 'http://atomicdesign.bradfrost.com/images/book-cover.svg',
+      title: 'The Times',
+      description: 'The Times is a British daily newspaper. It began in 1785 under the title The Daily Universal Register, adopting its current name on 1 January 1788. ',
+      image: 'http://www.archive.researchstudios.com/home/003-projects/times/TheTimes-Front-2.jpg',
       price: 1,
       quantity: 150
     },
     {
       id: 5,
-      title: 'Atomic Design',
-      description: 'Atomic Design details all that goes into creating and maintaining robust design systems.',
-      image: 'http://atomicdesign.bradfrost.com/images/book-cover.svg',
+      title: 'The Times',
+      description: 'The Times is a British daily newspaper. It began in 1785 under the title The Daily Universal Register, adopting its current name on 1 January 1788. ',
+      image: 'http://www.archive.researchstudios.com/home/003-projects/times/TheTimes-Front-2.jpg',
       price: 1,
       quantity: 150
     },
     {
       id: 6,
-      title: 'Atomic Design',
-      description: 'Atomic Design details all that goes into creating and maintaining robust design systems.',
-      image: 'http://atomicdesign.bradfrost.com/images/book-cover.svg',
+      title: 'The Times',
+      description: 'The Times is a British daily newspaper. It began in 1785 under the title The Daily Universal Register, adopting its current name on 1 January 1788. ',
+      image: 'http://www.archive.researchstudios.com/home/003-projects/times/TheTimes-Front-2.jpg',
       price: 1,
       quantity: 150
     },
     {
       id: 7,
-      title: 'Atomic Design',
-      description: 'Atomic Design details all that goes into creating and maintaining robust design systems.',
-      image: 'http://atomicdesign.bradfrost.com/images/book-cover.svg',
+      title: 'The Times',
+      description: 'The Times is a British daily newspaper. It began in 1785 under the title The Daily Universal Register, adopting its current name on 1 January 1788. ',
+      image: 'http://www.archive.researchstudios.com/home/003-projects/times/TheTimes-Front-2.jpg',
       price: 1,
       quantity: 150
     }
