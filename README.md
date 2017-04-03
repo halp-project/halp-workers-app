@@ -9,10 +9,7 @@ Client for Hospital Workers.
 
 ## Local development
 
-Requirements
-- [Node 7.x](https://nodejs.org/es/) (Install it via [nvm](https://github.com/creationix/nvm))
-
-Run
+Run it on [Node 7.x](https://nodejs.org/es/) (Install it via [nvm](https://github.com/creationix/nvm))
 ```bash
 npm install // Install dependencies 
 ng serve // Serve app in local http://localhost:4200/ 
