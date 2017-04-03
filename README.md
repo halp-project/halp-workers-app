@@ -1,7 +1,8 @@
 # Halp Workers App
 Client for Hospital Workers.
 
-[![Build Status](https://travis-ci.org/halp-project/halp-workers-app.svg?branch=master)](https://travis-ci.org/halp-project/halp-workers-app)
+[![Build Status](https://travis-ci.org/halp-project/halp-workers-app.svg?branch=dev)](https://travis-ci.org/halp-project/halp-workers-app)
+[![Heroku](http://heroku-badge.herokuapp.com/?app=halp-workers-app-staging&style=flat&svg=1&root=index.html)]
 
 ## Prerequisites
 
@@ -27,4 +28,4 @@ ng help // Angular CLI helper
 
 ## Contribution Guides
 ### Commits
-Use `git cz` instead of `git commit`
+Follow [Commitizen guidelines](https://github.com/commitizen/cz-cli) for commit messages by using `git cz` command instead of `git commit`.
