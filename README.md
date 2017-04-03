@@ -15,7 +15,7 @@ npm install // Install dependencies
 ng serve // Serve app in local http://localhost:4200/ 
 ```
 
-More scripts: [package.json](https://github.com/halp-project/halp-workers-app/blob/dev/package.json)
+More commands: [package.json](https://github.com/halp-project/halp-workers-app/blob/dev/package.json) and [Angular CLI](https://cli.angular.io/).
 
 ## Contribution Guides
 ### Commits
