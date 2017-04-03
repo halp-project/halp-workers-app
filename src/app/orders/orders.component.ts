@@ -21,23 +21,109 @@ export class OrdersComponent implements OnInit {
 
   onSubmit() { this.submitted = true; }
 
-  /*
-  openNewOrderModal(content) {
-    this.modalService.open(content).result.then((result) => {
-      this.closeResult = `Closed with: ${result}`;
-    }, (reason) => {
-      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
-    });
-  }
-  */
-
-  private getDismissReason(reason: any): string {
-    if (reason === ModalDismissReasons.ESC) {
-      return 'by pressing ESC';
-    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
-      return 'by clicking on a backdrop';
-    } else {
-      return  `with: ${reason}`;
+  ordersCompleted: Order[] = [
+    {
+      id: 1,
+      type: 'food',
+      title: 'Generic Food 1',
+      addressee: 'Rupert Ellery',
+      room: 101,
+      timeAgo: 5,
+      state: "Completed",
+      image: "./assets/icons/food.svg"
+    },
+    {
+      id: 2,
+      type: 'book',
+      title: 'Generic Book 1',
+      addressee: 'Elyzabeth Truman',
+      room: 102,
+      timeAgo: 5,
+      state: "Completed",
+      image: "./assets/icons/book.svg"
+    },
+    {
+      id: 3,
+      type: 'kiosk',
+      title: 'Generic Kiosk Item 1',
+      addressee: 'Sequoia Ariel',
+      room: 103,
+      timeAgo: 5,
+      state: "Completed",
+      image: "./assets/icons/newspaper.svg"
+    },
+    {
+      id: 4,
+      type: 'food',
+      title: 'Generic Food 2',
+      addressee: 'Prabhat Olympe',
+      room: 104,
+      timeAgo: 5,
+      state: "Completed",
+      image: "./assets/icons/food.svg"
+    },
+    {
+      id: 5,
+      type: 'book',
+      title: 'Generic Book 2',
+      addressee: 'Emma Madhukar',
+      room: 105,
+      timeAgo: 5,
+      state: "Completed",
+      image: "./assets/icons/book.svg"
     }
-  }
+  ];
+
+  ordersPending: Order[] = [
+    {
+      id: 1,
+      type: 'food',
+      title: 'Generic Food 1',
+      addressee: 'Rupert Ellery',
+      room: 101,
+      timeAgo: 5,
+      state: "Pending",
+      image: "./assets/icons/food.svg"
+    },
+    {
+      id: 2,
+      type: 'book',
+      title: 'Generic Book 1',
+      addressee: 'Elyzabeth Truman',
+      room: 102,
+      timeAgo: 5,
+      state: "Pending",
+      image: "./assets/icons/book.svg"
+    },
+    {
+      id: 3,
+      type: 'kiosk',
+      title: 'Generic Kiosk Item 1',
+      addressee: 'Sequoia Ariel',
+      room: 103,
+      timeAgo: 5,
+      state: "Pending",
+      image: "./assets/icons/newspaper.svg"
+    },
+    {
+      id: 4,
+      type: 'food',
+      title: 'Generic Food 2',
+      addressee: 'Prabhat Olympe',
+      room: 104,
+      timeAgo: 5,
+      state: "Pending",
+      image: "./assets/icons/food.svg"
+    },
+    {
+      id: 5,
+      type: 'book',
+      title: 'Generic Book 2',
+      addressee: 'Emma Madhukar',
+      room: 105,
+      timeAgo: 5,
+      state: "Pending",
+      image: "./assets/icons/book.svg"
+    }
+  ];
 }

@@ -6,6 +6,7 @@ export class Order {
     room: number;
     timeAgo: number;
     state: string;
+    image: string;
 
     constructor(
         id: number,
@@ -14,6 +15,7 @@ export class Order {
         addressee: string,
         room: number,
         timeAgo: number,
-        state: string
+        state: string,
+        image: string
     ){}
 }

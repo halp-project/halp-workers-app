@@ -10,8 +10,7 @@ import { OrderItemComponent } from './order-list/order-item/order-item.component
 @NgModule({
   imports: [
     CommonModule,
-    OrdersRoutingModule,
-    NgbModule
+    OrdersRoutingModule
   ],
   declarations: [ OrdersComponent, OrdersListComponent, OrderItemComponent ]
 })
