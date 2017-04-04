@@ -23,7 +23,7 @@ import { AppComponent } from './app.component';
     SignupModule,
     AuthModule,
     AppRoutingModule,
-    NgbModule.forRoot(),
+    NgbModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
