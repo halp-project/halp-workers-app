@@ -1,7 +1,7 @@
 # Halp Workers App
 Client for Hospital Workers.
 
-[![Build Status](https://travis-ci.org/h-assistant/h-assistant-client.svg?branch=master)](https://travis-ci.org/h-assistant/h-assistant-client)
+[![Build Status](https://travis-ci.org/halp-project/halp-workers-app.svg?branch=master)](https://travis-ci.org/halp-project/halp-workers-app)
 
 ## Prerequisites
 
@@ -24,3 +24,6 @@ More [Angular CLI](https://cli.angular.io/) commands
 ng generate component component-name // Generate a new Angular component 
 ng help // Angular CLI helper 
 ```
+## Contribution Guides
+### Commits
+Use `git cz` instead of `git commit`
