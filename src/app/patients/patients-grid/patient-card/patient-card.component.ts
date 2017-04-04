@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 
 import { Patient } from '../patient';
 
@@ -10,9 +11,9 @@ import { Patient } from '../patient';
 export class PatientCardComponent implements OnInit {
   @Input() patient: Patient;
   @Output() _delete: EventEmitter<number> = new EventEmitter();
-  @Output() _edit: EventEmitter<Patient> = new EventEmitter();
+  closeResult: string;
 
-  constructor() { }
+  constructor(private modalService: NgbModal) { }
 
   ngOnInit() {
   }
@@ -21,7 +22,22 @@ export class PatientCardComponent implements OnInit {
     this._delete.emit(this.patient.id);
   }
 
-  edit() {
-    this._edit.emit(this.patient);
+  edit(content) {
+    this.modalService.open(content).result.then((result) => {
+      this.closeResult = `Closed with: ${result}`;
+    }, (reason) => {
+      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+    });
   }
+
+  private getDismissReason(reason: any): string {
+    if (reason === ModalDismissReasons.ESC) {
+      return 'by pressing ESC';
+    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
+      return 'by clicking on a backdrop';
+    } else {
+      return  `with: ${reason}`;
+    }
+  }
+
 }
