@@ -2,6 +2,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 
 import { Menu } from '../menu';
+import {Dish} from '../../../dishes/dishes-grid/dish';
 
 @Component({
   selector: 'app-menu-card',
@@ -12,6 +13,7 @@ export class MenuCardComponent implements OnInit {
   @Input() menu: Menu;
   @Output() _delete: EventEmitter<number> = new EventEmitter();
   closeResult: string;
+  d: Dish;
 
   constructor(private modalService: NgbModal) { }
 

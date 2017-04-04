@@ -2,7 +2,7 @@ import {Dish} from '../../dishes/dishes-grid/dish';
 
 export class Menu {
   id: number;
-  date: Date;
+  date: string;
   firstDish : Dish[];
   secondDish : Dish[];
   dessert : Dish[];
@@ -10,7 +10,7 @@ export class Menu {
 
   constructor(
     id: number,
-    date: Date,
+    date: string,
     firstDish : Dish[],
     secondDish : Dish[],
     dessert : Dish[]

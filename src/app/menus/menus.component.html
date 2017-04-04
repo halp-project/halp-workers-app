@@ -46,7 +46,7 @@
 
 <template #content let-c="close" let-d="dismiss">
   <div class="modal-header">
-    <h4 class="modal-title">Add new Menu</h4>
+    <h4 class="modal-title">Add new menu</h4>
     <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
       <span aria-hidden="true">&times;</span>
     </button>
@@ -55,28 +55,28 @@
     <form>
       <div class="form-group">
         <label for="id">ID</label>
-        <input type="text" class="form-control" id="id" required>
+        <input type="number" class="form-control" id="id" required>
       </div>
       <div class="form-group">
-        <label for="title">Title</label>
-        <input type="text" class="form-control" id="title" required>
+        <label for="title">Date</label>
+        <input type="date" class="form-control" id="date" required>
       </div>
       <div class="form-group">
-        <label for="author">Author</label>
-        <input type="text" class="form-control" id="author" required>
+        <label for="title">Starters</label>
+        <input type="text" class="form-control" id="starters" required>
       </div>
       <div class="form-group">
-        <label for="description">Description</label>
-        <input type="text" class="form-control" id="description" required>
+        <label for="title">Main dishes</label>
+        <input type="text" class="form-control" id="main-dishes" required>
       </div>
       <div class="form-group">
-        <label for="image">Image</label>
-        <input type="text" class="form-control" id="image" required>
+        <label for="title">Desserts</label>
+        <input type="text" class="form-control" id="dessert" required>
       </div>
     </form>
   </div>
   <div class="modal-footer">
     <button type="button" class="btn btn-secondary" (click)="c('Close click')">Close</button>
-    <button type="button" class="btn btn-success" (click)="c('Close click')">Add</button>
+    <button type="button" class="btn btn-success" (click)="c('Close click')">Save</button>
   </div>
 </template>

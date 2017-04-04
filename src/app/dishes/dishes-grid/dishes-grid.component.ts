@@ -74,9 +74,9 @@ export class DishesGridComponent implements OnInit, OnChanges {
     },
     {
       id: 7,
-      name: 'Yogurt', 
+      name: 'Yoghurt', 
       image: 'https://carolynthomas.files.wordpress.com/2009/10/activia_mixed_berry.png?w=275',
-      description: 'Description of the "Yogurt" dish...',
+      description: 'Description of the "Yoghurt" dish...',
       type: 2
     }
   ];

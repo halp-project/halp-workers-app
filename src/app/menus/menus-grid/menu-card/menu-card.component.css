@@ -1,0 +1,26 @@
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#date-box {
+    display:flex;
+    justify-content: flex-start;
+}
+
+#button-box {
+    display:flex;
+    justify-content: flex-end;
+}
+
+p {
+    display: inline;
+}
+
+.myBadges {
+    margin-left: 10pt ; 
+    font-size: 14pt;
+    display:flex;
+    justify-content: center;
+}
