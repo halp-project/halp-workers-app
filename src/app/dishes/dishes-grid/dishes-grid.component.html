@@ -1,0 +1,7 @@
+<div class="activity-content">
+  <div class="container-fluid activity-container">
+    <div class="col-3 col-centered book-box" *ngFor="let dish of dishes">
+      <app-dish-card [dish]="dish" (_delete)="deleteDish($dishId)"></app-dish-card>
+    </div>
+  </div>
+</div>

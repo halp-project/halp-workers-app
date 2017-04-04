@@ -1,0 +1,82 @@
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="/meals">Halp Meals</a>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/menus">Home <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+    
+    <div class="navbar-box">
+        <ul class="nav nav-tabs">
+            <li class="nav-item"><a class="nav-link active" routerLink="/menus" routerLinkActive="active">Menus</a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="/dishes" routerLinkActive="active">Dishes</a></li>
+        </ul>
+    </div>
+
+    <div class="navbar-box" id="navbar-box-search">
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search">
+            <button type="button" class="btn btn-outline-success">Search</button>
+        </form>
+    </div>
+
+    <div class="navbar-box">
+        <button (click)="openNewMenuModal(content)" type="button" class="btn btn-primary">+ Add Menu</button>
+    </div>
+
+    <div class="navbar-box" id="navbar-box-avatar">
+        <img src="https://pbs.twimg.com/profile_images/551436089064296449/2tLSNqig.jpeg" class="rounded-circle navbar-item" id="image-avatar-navbar">
+    </div>
+    
+    <div class="navbar-box" id="navbar-box-logout-icon">
+        <a routerLink="../auth" routerLinkActive="active"> 
+            Logout
+        </a>
+    </div>
+
+  </div>
+</nav>
+
+<app-menus-grid [menu]='menu'></app-menus-grid>
+
+<template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">Add new Menu</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="form-group">
+        <label for="id">ID</label>
+        <input type="text" class="form-control" id="id" required>
+      </div>
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" class="form-control" id="title" required>
+      </div>
+      <div class="form-group">
+        <label for="author">Author</label>
+        <input type="text" class="form-control" id="author" required>
+      </div>
+      <div class="form-group">
+        <label for="description">Description</label>
+        <input type="text" class="form-control" id="description" required>
+      </div>
+      <div class="form-group">
+        <label for="image">Image</label>
+        <input type="text" class="form-control" id="image" required>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="c('Close click')">Close</button>
+    <button type="button" class="btn btn-success" (click)="c('Close click')">Add</button>
+  </div>
+</template>

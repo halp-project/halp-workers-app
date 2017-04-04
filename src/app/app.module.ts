@@ -7,6 +7,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { AuthModule } from './auth/auth.module';
 import { BooksModule } from './books/books.module';
+import { DishesModule } from './dishes/dishes.module';
+import { MenusModule } from './menus/menus.module';
 
 import { AppComponent } from './app.component';
 
@@ -19,6 +21,8 @@ import { AppComponent } from './app.component';
     FormsModule,
     HttpModule,
     BooksModule,
+    DishesModule,
+    MenusModule,
     AuthModule,
     AppRoutingModule,
     NgbModule.forRoot()

@@ -1,4 +1,4 @@
-import {Dish} from '../dishes/dish';
+import {Dish} from '../../dishes/dishes-grid/dish';
 
 export class Menu {
   id: number;
