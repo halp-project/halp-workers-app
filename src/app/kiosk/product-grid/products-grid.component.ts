@@ -34,7 +34,7 @@ export class ProductsGridComponent implements OnInit, OnChanges {
       id: 1,
       title: 'The Times',
       description: 'The Times is a British daily newspaper. It began in 1785 under the title The Daily Universal Register, adopting its current name on 1 January 1788. ',
-      image: 'http://www.archive.researchstudios.com/home/003-projects/times/TheTimes-Front-2.jpg',
+      image: 'https://pbs.twimg.com/profile_images/741575285208911872/CjQ9f3Vc.jpg',
       price: 1,
       quantity: 150
     },
@@ -42,7 +42,7 @@ export class ProductsGridComponent implements OnInit, OnChanges {
       id: 2,
       title: 'The Times',
       description: 'The Times is a British daily newspaper. It began in 1785 under the title The Daily Universal Register, adopting its current name on 1 January 1788. ',
-      image: 'http://www.archive.researchstudios.com/home/003-projects/times/TheTimes-Front-2.jpg',
+      image: 'https://pbs.twimg.com/profile_images/741575285208911872/CjQ9f3Vc.jpg',
       price: 1,
       quantity: 150
     },
@@ -50,7 +50,7 @@ export class ProductsGridComponent implements OnInit, OnChanges {
       id: 3,
       title: 'The Times',
       description: 'The Times is a British daily newspaper. It began in 1785 under the title The Daily Universal Register, adopting its current name on 1 January 1788. ',
-      image: 'http://www.archive.researchstudios.com/home/003-projects/times/TheTimes-Front-2.jpg',
+      image: 'https://pbs.twimg.com/profile_images/741575285208911872/CjQ9f3Vc.jpg',
       price: 1,
       quantity: 150
     },
@@ -58,7 +58,7 @@ export class ProductsGridComponent implements OnInit, OnChanges {
       id: 4,
       title: 'The Times',
       description: 'The Times is a British daily newspaper. It began in 1785 under the title The Daily Universal Register, adopting its current name on 1 January 1788. ',
-      image: 'http://www.archive.researchstudios.com/home/003-projects/times/TheTimes-Front-2.jpg',
+      image: 'https://pbs.twimg.com/profile_images/741575285208911872/CjQ9f3Vc.jpg',
       price: 1,
       quantity: 150
     },
@@ -66,7 +66,7 @@ export class ProductsGridComponent implements OnInit, OnChanges {
       id: 5,
       title: 'The Times',
       description: 'The Times is a British daily newspaper. It began in 1785 under the title The Daily Universal Register, adopting its current name on 1 January 1788. ',
-      image: 'http://www.archive.researchstudios.com/home/003-projects/times/TheTimes-Front-2.jpg',
+      image: 'https://pbs.twimg.com/profile_images/741575285208911872/CjQ9f3Vc.jpg',
       price: 1,
       quantity: 150
     },
@@ -74,7 +74,7 @@ export class ProductsGridComponent implements OnInit, OnChanges {
       id: 6,
       title: 'The Times',
       description: 'The Times is a British daily newspaper. It began in 1785 under the title The Daily Universal Register, adopting its current name on 1 January 1788. ',
-      image: 'http://www.archive.researchstudios.com/home/003-projects/times/TheTimes-Front-2.jpg',
+      image: 'https://pbs.twimg.com/profile_images/741575285208911872/CjQ9f3Vc.jpg',
       price: 1,
       quantity: 150
     },
@@ -82,7 +82,7 @@ export class ProductsGridComponent implements OnInit, OnChanges {
       id: 7,
       title: 'The Times',
       description: 'The Times is a British daily newspaper. It began in 1785 under the title The Daily Universal Register, adopting its current name on 1 January 1788. ',
-      image: 'http://www.archive.researchstudios.com/home/003-projects/times/TheTimes-Front-2.jpg',
+      image: 'https://pbs.twimg.com/profile_images/741575285208911872/CjQ9f3Vc.jpg',
       price: 1,
       quantity: 150
     }
