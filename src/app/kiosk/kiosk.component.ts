@@ -1,28 +1,27 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 
-import { Book } from '../book';
+import { Product } from './product-grid/product';
 
 @Component({
-  selector: 'app-book-card',
-  templateUrl: './book-card.component.html',
-  styleUrls: ['./book-card.component.css']
+  selector: 'app-kiosk',
+  templateUrl: './kiosk.component.html',
+  styleUrls: ['./kiosk.component.css']
 })
-export class BookCardComponent implements OnInit {
-  @Input() book: Book;
-  @Output() _delete: EventEmitter<number> = new EventEmitter();
+export class KioskComponent implements OnInit {
+  newProduct: Product;
   closeResult: string;
+  id = 7;
+  submitted = false;
 
   constructor(private modalService: NgbModal) { }
 
   ngOnInit() {
   }
 
-  delete() {
-    this._delete.emit(this.book.id);
-  }
+  onSubmit() { this.submitted = true; }
 
-  edit(content) {
+  openNewProductModal(content) {
     this.modalService.open(content).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;
     }, (reason) => {
@@ -39,5 +38,4 @@ export class BookCardComponent implements OnInit {
       return  `with: ${reason}`;
     }
   }
-
 }

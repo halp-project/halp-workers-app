@@ -1,15 +1,15 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 
-import { Book } from '../book';
+import { Product } from '../product';
 
 @Component({
-  selector: 'app-book-card',
-  templateUrl: './book-card.component.html',
-  styleUrls: ['./book-card.component.css']
+  selector: 'app-product-card',
+  templateUrl: './product-card.component.html',
+  styleUrls: ['./product-card.component.css']
 })
-export class BookCardComponent implements OnInit {
-  @Input() book: Book;
+export class ProductCardComponent implements OnInit {
+  @Input() product: Product;
   @Output() _delete: EventEmitter<number> = new EventEmitter();
   closeResult: string;
 
@@ -19,7 +19,7 @@ export class BookCardComponent implements OnInit {
   }
 
   delete() {
-    this._delete.emit(this.book.id);
+    this._delete.emit(this.product.id);
   }
 
   edit(content) {

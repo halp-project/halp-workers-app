@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, OnChanges, SimpleChange, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, SimpleChange } from '@angular/core';
 
 import { Book } from './book';
 
@@ -10,7 +10,6 @@ import { Book } from './book';
 export class BooksGridComponent implements OnInit, OnChanges {
 
   @Input() newBook: Book;
-  @Output() editedBook: EventEmitter<Book> = new EventEmitter();
 
   constructor() { }
 
@@ -28,10 +27,6 @@ export class BooksGridComponent implements OnInit, OnChanges {
 
   deleteBook(bookId) {
     this.books.splice(bookId, 1);
-  }
-
-  editBook(book) {
-    this.editedBook.emit(book);
   }
 
   books: Book[] = [

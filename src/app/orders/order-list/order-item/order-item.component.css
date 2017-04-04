@@ -1,0 +1,32 @@
+
+.icon-order-box {
+    height: 30px;
+    width: 30px;
+    text-align: left;
+}
+
+.item {
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.field {
+    display:inline-block;
+    margin-right:10px;
+}
+
+#contentAlign {
+    display: flex;
+    justify-content: space-between; 
+}
+
+#textCard {
+    display: flex;
+    align-items: center;
+}
+
+.rowPropierties {
+    padding: 3pt 0;
+}
