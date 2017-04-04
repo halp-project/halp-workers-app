@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AuthRoutingModule } from './auth-routing.module';
+
 import { AuthComponent } from './auth.component';
 
 @NgModule({

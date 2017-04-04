@@ -9,6 +9,7 @@ import { AuthModule } from './auth/auth.module';
 import { BooksModule } from './books/books.module';
 import { OrdersModule } from './orders/orders.module';
 import { KioskModule } from './kiosk/kiosk.module';
+import { PatientsModule } from './patients/patients.module';
 
 import { AppComponent } from './app.component';
 
@@ -24,6 +25,7 @@ import { AppComponent } from './app.component';
     KioskModule,
     AuthModule,
     OrdersModule,
+    PatientsModule,
     AppRoutingModule,
     NgbModule.forRoot()
   ],
