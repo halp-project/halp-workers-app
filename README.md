@@ -1,5 +1,5 @@
-# HAssistantClient
-Client of H Assistant app.
+# Halp Workers App
+Client for Hospital Workers.
 
 [![Build Status](https://travis-ci.org/h-assistant/h-assistant-client.svg?branch=master)](https://travis-ci.org/h-assistant/h-assistant-client)
 
