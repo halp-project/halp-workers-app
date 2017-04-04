@@ -26,7 +26,7 @@
     </div>
 
     <div class="navbar-box">
-        <button (click)="openNewBookModal(content)" type="button" class="btn btn-primary">+ Add Dish</button>
+        <button (click)="openNewDishModal(content)" type="button" class="btn btn-primary">+ Add Dish</button>
     </div>
 
     <div class="navbar-box" id="navbar-box-avatar">
@@ -58,12 +58,8 @@
         <input type="text" class="form-control" id="id" required>
       </div>
       <div class="form-group">
-        <label for="title">Title</label>
+        <label for="title">Name</label>
         <input type="text" class="form-control" id="title" required>
-      </div>
-      <div class="form-group">
-        <label for="author">Author</label>
-        <input type="text" class="form-control" id="author" required>
       </div>
       <div class="form-group">
         <label for="description">Description</label>
@@ -73,10 +69,24 @@
         <label for="image">Image</label>
         <input type="text" class="form-control" id="image" required>
       </div>
+      <div class="form-group">
+        <label for="type">Type</label>
+        <div class="btn-group" data-toggle="buttons">
+          <label class="btn btn-primary active">
+            <input type="radio" name="type" id="dish0" autocomplete="off" checked> Starter
+          </label>
+          <label class="btn btn-primary">
+            <input type="radio" name="type" id="dish1" autocomplete="off"> Main dish
+          </label>
+          <label class="btn btn-primary">
+            <input type="radio" name="type" id="dish2" autocomplete="off"> Dessert
+          </label>
+        </div>
+      </div>
     </form>
   </div>
   <div class="modal-footer">
     <button type="button" class="btn btn-secondary" (click)="c('Close click')">Close</button>
-    <button type="button" class="btn btn-success" (click)="c('Close click')">Add</button>
+    <button type="button" class="btn btn-success" (click)="c('Close click')">Save</button>
   </div>
 </template>
