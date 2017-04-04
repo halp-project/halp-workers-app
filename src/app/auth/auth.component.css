@@ -1,6 +1,20 @@
 
 #button-register {
     position: fixed;
-    left: 45%;
+    left: 50%;
     transform: translate(0, +5%);
+}
+
+#login {
+    position: fixed;
+    left: 30%;
+    top: 20%;
+}
+
+#username {
+ width: 30%;
+}
+
+#pass {
+ width: 30%;
 }

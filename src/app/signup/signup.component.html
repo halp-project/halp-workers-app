@@ -1,27 +1,99 @@
+<div class="container" id="signup-form">
 
-<!--
+  <h1>Sign up <button routerLink="../auth" routerLinkActive="active" type="button" class="btn btn-primary" id="button-login">Login</button></h1>
 
-IMPLEMENTACION FORMULARIO CON REQUISITOS
+  <form novalidate #f="ngForm" (ngSubmit)="onSubmit(f)">
 
-<label for="name">Name</label>
+      <br>
+      <input
+        id="name"
+        type="text"
+        placeholder="Enter your full name"
+        name="name"
+        ngModel
+        #userRealName="ngModel"
+        minlength="2"
+        maxlength="35"
+        class="form-control"
+        required>
 
-<input type="text" id="name" class="form-control"
-       required minlength="4" maxlength="24"
-       name="name" [(ngModel)]="hero.name"
-       #name="ngModel" >
-
-<div *ngIf="name.errors && (name.dirty || name.touched)"
-     class="alert alert-danger">
-    <div [hidden]="!name.errors.required">
+     <div *ngIf="userRealName.errors?.required && userRealName.touched" class="text-danger">
       Name is required
-    </div>
-    <div [hidden]="!name.errors.minlength">
-      Name must be at least 4 characters long.
-    </div>
-    <div [hidden]="!name.errors.maxlength">
-      Name cannot be more than 24 characters long.
-    </div>
-</div>
--->
+     </div>
+     <div *ngIf="userRealName.errors?.minlength && userRealName.touched" class="text-danger">
+      Minimum of 2 characters
+     </div>
 
-<button routerLink="../auth" routerLinkActive="active" type="button" class="btn btn-primary" id="button-login">Submit</button>
+       <br>
+       <input
+         id="username"
+         type="text"
+         placeholder="Enter a username"
+         name="username"
+         ngModel
+         #userName="ngModel"
+         minlength="4"
+         maxlength="20"
+         class="form-control"
+         required>
+
+      <div *ngIf="userName.errors?.required && userName.touched" class="text-danger">
+       Username is required
+      </div>
+      <div *ngIf="userName.errors?.minlength && userName.touched" class="text-danger">
+       Minimum of 2 characters
+      </div>
+
+    <div ngModelGroup="pass" #userPass="ngModelGroup">
+        <br>
+        <input
+          id="pass"
+          type="password"
+          placeholder="Enter a password"
+          name="password"
+          ngModel
+          #userPass1="ngModel"
+          class="form-control"
+          minlength="6"
+          maxlength="20"
+          required>
+
+        <br>
+        <input
+          id="pass2"
+          type="password"
+          placeholder="Confirm the password"
+          name="confirm"
+          ngModel
+          #userPass1Confirm="ngModel"
+          class="form-control"
+          minlength="6"
+          maxlength="20"
+          validateEqual="password"
+          required>
+
+      <div *ngIf="userPass.invalid && userPass.touched  " class="text-danger">
+        Repeat the password. (from 6 to 20 char.)
+      </div>
+
+    </div>
+
+
+
+    <br>
+    <label for="adm">Administrator role</label>
+    <select>
+     <option value="books">Books</option>
+     <option value="kiosk">Kiosk</option>
+     <option value="meals">Meals</option>
+    </select>
+
+    <br>
+    <br>
+
+
+
+    <button routerLink="../auth" routerLinkActive="active" type="submit" [disabled]="f.invalid" class="btn btn-success">Sign up</button>
+  </form>
+
+</div>
