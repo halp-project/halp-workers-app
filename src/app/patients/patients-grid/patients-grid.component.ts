@@ -12,6 +12,63 @@ export class PatientsGridComponent implements OnInit, OnChanges {
   @Input() newPatient: Patient;
   @Output() editedPatient: EventEmitter<Patient> = new EventEmitter();
 
+  patients: Patient[] = [
+    {
+      name: 'Melinda',
+      age: 30,
+      id: 1,
+      description: 'Young woman.',
+      username: 'meljohnson',
+      password: 'thisisnotmypass',
+      image: 'https://randomuser.me/api/portraits/women/76.jpg'
+    },
+    {
+      name: 'Melinda',
+      age: 30,
+      id: 2,
+      description: 'Young woman.',
+      username: 'meljohnson',
+      password: 'thisisnotmypass',
+      image: 'https://randomuser.me/api/portraits/women/76.jpg'
+    },
+    {
+      name: 'Melinda',
+      age: 30,
+      id: 3,
+      description: 'Young woman.',
+      username: 'meljohnson',
+      password: 'thisisnotmypass',
+      image: 'https://randomuser.me/api/portraits/women/76.jpg'
+    },
+    {
+      name: 'Melinda',
+      age: 30,
+      id: 4,
+      description: 'Young woman.',
+      username: 'meljohnson',
+      password: 'thisisnotmypass',
+      image: 'https://randomuser.me/api/portraits/women/76.jpg'
+    },
+    {
+      name: 'Melinda',
+      age: 30,
+      id: 5,
+      description: 'Young woman.',
+      username: 'meljohnson',
+      password: 'thisisnotmypass',
+      image: 'https://randomuser.me/api/portraits/women/76.jpg'
+    },
+    {
+      name: 'Melinda',
+      age: 30,
+      id: 6,
+      description: 'Young woman.',
+      username: 'meljohnson',
+      password: 'thisisnotmypass',
+      image: 'https://randomuser.me/api/portraits/women/76.jpg'
+    }
+  ];
+
   constructor() { }
 
   ngOnInit() {
@@ -33,40 +90,5 @@ export class PatientsGridComponent implements OnInit, OnChanges {
   editPatient(patient) {
     this.editedPatient.emit(patient);
   }
-
-  patients: Patient[] = [
-    {
-      name: 'Georgios',
-      age: 22,
-      id: 1,
-      description: 'Chico Griego',
-      username: 'Georiord',
-      password: '1234567890',
-    },
-    {
-      name: 'Jorge',
-      age: 22,
-      id: 2,
-      description: 'Chico',
-      username: 'Jorgeee',
-      password: '2424242424',
-    },
-    {
-      name: 'Emilio',
-      age: 22,
-      id: 3,
-      description: 'Chico',
-      username: 'Emiliooo',
-      password: '0987654321',
-    },
-    {
-      name: 'Jose',
-      age: 22,
-      id: 4,
-      description: 'Chico Jose',
-      username: 'Joseee',
-      password: 'ABCDEFGHIJ',
-    },
-  ];
 
 }
