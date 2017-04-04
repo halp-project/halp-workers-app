@@ -8,6 +8,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AuthModule } from './auth/auth.module';
 import { SignupModule } from './signup/signup.module';
 import { BooksModule } from './books/books.module';
+import { OrdersModule } from './orders/orders.module';
+import { KioskModule } from './kiosk/kiosk.module';
+import { PatientsModule } from './patients/patients.module';
 
 import { AppComponent } from './app.component';
 
@@ -19,9 +22,12 @@ import { AppComponent } from './app.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    BooksModule,    
+    BooksModule,
+    KioskModule,
     SignupModule,
     AuthModule,
+    OrdersModule,
+    PatientsModule,
     AppRoutingModule,
     NgbModule.forRoot()
   ],
