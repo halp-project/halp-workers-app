@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
-import { Patient } from '../Patient';
+import { Patient } from '../patient';
 
 @Component({
   selector: 'app-patient-card',
