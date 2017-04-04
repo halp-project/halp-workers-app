@@ -1,14 +1,13 @@
 <div class="activity-content">
 
   <div class="container-fluid activity-container">
-    
-    <div class="col-12 col-centered book-box" *ngFor="let order of orders">      
 
-          <app-order-item [order]="order" (_delete)="deleteOrder($orderId)"></app-order-item>
+    <div class="col-12 col-centered book-box" *ngFor="let order of orders">
+
+      <app-order-item [order]="order" (_delete)="deleteOrder($orderId)"></app-order-item>
 
     </div>
 
   </div>
 
 </div>
-

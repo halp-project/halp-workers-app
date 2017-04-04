@@ -18,27 +18,27 @@ export class OrderItemComponent implements OnInit {
   }
 
   action() {
-    if(this.order.state == "Completed"){
+    if (this.order.state == "Completed") {
       this._delete.emit(this.order.id);
-    }else{
+    } else {
       this._delete.emit(this.order.id);
     }
   }
 
   delete() {
-      this._delete.emit(this.order.id);
+    this._delete.emit(this.order.id);
   }
 
-  getButtonClass(){
-    if(this.order.state == "Completed") {
+  getButtonClass() {
+    if (this.order.state == "Completed") {
       return "btn btn-primary";
     } else {
       return "btn btn-success";
     }
   }
 
-  getButtonImg(){
-    if(this.order.state == "Completed") {
+  getButtonImg() {
+    if (this.order.state == "Completed") {
       return "fa fa-undo";
     } else {
       return "fa fa-check-circle-o";
