@@ -1,0 +1,36 @@
+<div class="card">
+  <div class="container">
+    <div class="row rowPropierties">
+
+      <div class="panel icon-order-box field col-1">
+        <img class="icon-order-box" [src]='order.image' alt="Item icon">
+      </div>
+
+      <div id="textCard" class="field col-3">
+        <p class="card-text">{{ order.title }}</p>
+      </div>
+
+      <div id="textCard" class="field col-3">
+        <p class="card-text">{{order.addressee}}</p>
+      </div>
+
+      <div id="textCard" class="field col-1">
+        <p class="card-text">{{order.room}}</p>
+      </div>
+
+      <div id="textCard" class="field col-2">
+        <p class="card-text">{{order.timeAgo}} minutes ago.</p>
+      </div>
+
+      <div class="field col">
+        <button (click)="action()" type="button" [class]="getButtonClass()">
+          <i [class] = "getButtonImg()"></i>
+        </button>
+        <button (click)="delete()" type="button" class="btn btn-danger">
+          <i class="fa fa-trash-o"></i>
+        </button>
+      </div>
+      
+    </div>
+  </div>
+</div>
