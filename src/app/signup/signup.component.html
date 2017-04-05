@@ -1,6 +1,6 @@
 <div class="container" id="signup-form">
 
-  <h1>Sign up <button routerLink="../auth" routerLinkActive="active" type="button" class="btn btn-primary" id="button-login">Login</button></h1>
+  <h1>Signup <button routerLink="../auth" routerLinkActive="active" type="button" class="btn btn-primary" id="button-login">Login</button></h1>
 
   <form novalidate #f="ngForm" (ngSubmit)="onSubmit(f)">
 
@@ -41,15 +41,18 @@
 
     </div>
     <br>
-    <label for="adm">Administrator role</label>
-    <select>
-     <option value="books">Books</option>
-     <option value="kiosk">Kiosk</option>
-     <option value="meals">Meals</option>
-    </select>
-    <br>
-    <br>
-    <button routerLink="../menus" routerLinkActive="active" type="submit" [disabled]="f.invalid" class="btn btn-success">Sign up</button>
   </form>
+
+  <div class="button-box">
+    <button routerLink="../orders" routerLinkActive="active" class="btn btn-success">Signup Orders</button>        
+    <button routerLink="../books" routerLinkActive="active" class="btn btn-success">Signup Books</button>
+  </div>
+  <div class="button-box">
+    <button routerLink="../kiosk" routerLinkActive="active" class="btn btn-success">Signup Shop</button>
+    <button routerLink="../menus" routerLinkActive="active" class="btn btn-success">Signup Menus</button>
+  </div>
+  <div class="button-box">
+    <button routerLink="../patients" routerLinkActive="active" class="btn btn-success">Signup Patiens</button>
+  </div>
 
 </div>
