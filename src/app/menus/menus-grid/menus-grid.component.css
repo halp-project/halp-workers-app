@@ -1,6 +1,3 @@
-.activity-content {
-}
-
 .menu-box, .activity-content {
     display: flex; 
     align-items: center;
@@ -13,11 +10,15 @@
 }
 
 .row-centered {
-    text-align:center;
+    text-align: enter;
 }
 
 .col-centered {
-    display:inline-block;
-    float:none;
+    display: inline-block;
+    float: none;
     text-align:left;
+}
+
+.menu-card {
+    padding-top: 2em;
 }

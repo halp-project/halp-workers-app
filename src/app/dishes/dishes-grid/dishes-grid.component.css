@@ -1,6 +1,3 @@
-.activity-content {
-}
-
 .dish-box, .activity-content {
     display: flex; 
     align-items: center;
@@ -13,11 +10,11 @@
 }
 
 .row-centered {
-    text-align:center;
+    text-align: center;
 }
 
 .col-centered {
-    display:inline-block;
-    float:none;
-    text-align:left;
+    display: inline-block;
+    float: none;
+    text-align: left;
 }

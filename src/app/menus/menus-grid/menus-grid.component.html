@@ -1,6 +1,6 @@
 <div class="activity-content">
   <div class="container-fluid activity-container">
-    <div class="col-12 col-centered" *ngFor="let menu of menus">
+    <div class="col-12 col-centered menu-card" *ngFor="let menu of menus">
       <app-menu-card [menu]="menu" (_delete)="deleteMenu($menuId)"></app-menu-card>
     </div>
   </div>
