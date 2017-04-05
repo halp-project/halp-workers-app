@@ -11,8 +11,8 @@ Client for Hospital Workers.
 
 Run it on [Node 7.x](https://nodejs.org/es/) (Install it via [nvm](https://github.com/creationix/nvm))
 ```bash
-npm install // Install dependencies 
-ng serve // Serve app in local http://localhost:4200/ 
+npm install // Install dependencies
+ng serve // Serve app in local http://localhost:4200/
 ```
 
 More commands: [package.json](https://github.com/halp-project/halp-workers-app/blob/dev/package.json) and [Angular CLI](https://cli.angular.io/).
