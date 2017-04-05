@@ -1,46 +1,29 @@
 <div class="container" id="login">
 
+  <h1>Halp <button routerLink="../signup" routerLinkActive="active" type="button" class="btn btn-primary" id="button-register">Sign up</button></h1>
 
-    <h1>Halp <button routerLink="../signup" routerLinkActive="active" type="button" class="btn btn-primary" id="button-register">Sign up</button></h1>
+  <br>
+
+  <form novalidate #g="ngForm" (submit)="add(g.valid)">
+    <br>
+    <div ngModelGroup="pass" #userPass="ngModelGroup">
+      <label for="username">Username</label>
+      <input id="username" type="text" name="username" ngModel #userRealName="ngModel" minlength="4" maxlength="20" class="form-control" required>
+
+      <br>
+
+      <label for="password">Password</label>
+      <input id="pass" type="password" name="password" ngModel #userPass1="ngModel" class="form-control" minlength="6" maxlength="20" required>
+
+      <div *ngIf="userPass.invalid && userPass.touched " class="text-danger">
+        Valid username and password required
+      </div>
+    </div>
+
     <br>
 
-    <form novalidate #g="ngForm" (submit)="add(g.valid)">
-      <br>
-      <div ngModelGroup="pass" #userPass="ngModelGroup">
-        <label for="username">Username</label>
-        <input
-          id="username"
-          type="text"
-          name="username"
-          ngModel
-          #userRealName="ngModel"
-          minlength="4"
-          maxlength="20"
-          class="form-control"
-          required>
+    <button routerLink="../books" routerLinkActive="active" type="submit" class="btn btn-success">Sign up</button>
 
-        <br>
-
-        <label for="password">Password</label>
-        <input
-          id="pass"
-          type="password"
-          name="password"
-          ngModel
-          #userPass1="ngModel"
-          class="form-control"
-          minlength="6"
-          maxlength="20"
-          required>
-
-          <div *ngIf="userPass.invalid && userPass.touched " class="text-danger">
-            Valid username and password required
-          </div>
-      </div>
-
-      <br>
-
-      <button routerLink="../books" routerLinkActive="active" type="submit" class="btn btn-success">Sign up</button>
-
-    </form>
+  </form>
+  
 </div>
