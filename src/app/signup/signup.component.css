@@ -1,14 +1,20 @@
 
-#button-register {
+#button-login {
     position: fixed;
     left: 50%;
     transform: translate(0, +5%);
 }
 
-#login {
+
+
+#signup-form {
     position: fixed;
     left: 30%;
     top: 20%;
+}
+
+#name {
+ width: 30%;
 }
 
 #username {
@@ -16,5 +22,13 @@
 }
 
 #pass {
+ width: 30%;
+}
+
+#pass2 {
+ width: 30%;
+}
+
+#adm {
  width: 30%;
 }
