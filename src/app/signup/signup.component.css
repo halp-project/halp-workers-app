@@ -1,11 +1,8 @@
-
 #button-login {
     position: fixed;
     left: 50%;
     transform: translate(0, +5%);
 }
-
-
 
 #signup-form {
     position: fixed;
@@ -31,4 +28,8 @@
 
 #adm {
  width: 30%;
+}
+
+.button-box {
+    margin-bottom: 0.5em;
 }
