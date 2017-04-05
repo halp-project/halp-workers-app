@@ -8,7 +8,9 @@ export const routes: Routes = [
   { path: 'kiosk', loadChildren: 'app/kiosk/kiosk.module#KioskModule' },
   { path: 'orders', loadChildren: 'app/orders/orders.module#OrdersModule' },
   { path: 'patients', loadChildren: 'app/patients/patients.module#PatientsModule' },
-  { path: 'signup', loadChildren: 'app/signup/signup.module#SignupModule' }
+  { path: 'signup', loadChildren: 'app/signup/signup.module#SignupModule' },
+  { path: 'menus', loadChildren: 'app/menus/menus.module#MenusModule' },
+  { path: 'dishes', loadChildren: 'app/dishes/dishes.module#DishesModule' }
 ];
 
 @NgModule({
