@@ -9,7 +9,7 @@ Client for Hospital Workers.
 
 ## Local development
 
-Run it on [Node 7.x](https://nodejs.org/es/) (Install it via [nvm](https://github.com/creationix/nvm))
+Run it on [Node 7.x](https://nodejs.org/es/) (Install it via [nvm](https://github.com/creationix/nvm)) after starting the [server](https://github.com/halp-project/halp-server).
 ```bash
 npm install // Install dependencies
 ng serve // Serve app in local http://localhost:4200/
