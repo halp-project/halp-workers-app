@@ -10,7 +10,7 @@ import { Book } from '../book';
 })
 export class BookCardComponent implements OnInit {
   @Input() book: Book;
-  @Output() _delete: EventEmitter<number> = new EventEmitter();
+  @Output() eventDelete: EventEmitter<any> = new EventEmitter();
   closeResult: string;
 
   constructor(private modalService: NgbModal) { }
@@ -19,7 +19,9 @@ export class BookCardComponent implements OnInit {
   }
 
   delete() {
-    this._delete.emit(this.book.id);
+    console.log(this.book.id);
+    var i = this.book.id;
+    this.eventDelete.emit(i);
   }
 
   edit(content) {

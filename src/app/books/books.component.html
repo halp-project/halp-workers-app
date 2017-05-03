@@ -47,29 +47,26 @@
   <div class="modal-body">
     <form>
       <div class="form-group">
-        <label for="id">ID</label>
-        <input type="text" class="form-control" id="id" required>
-      </div>
-      <div class="form-group">
         <label for="title">Title</label>
-        <input type="text" class="form-control" id="title" required>
+        <input #title type="text" class="form-control" id="title" required>
       </div>
       <div class="form-group">
         <label for="author">Author</label>
-        <input type="text" class="form-control" id="author" required>
+        <input #author type="text" class="form-control" id="author" required>
       </div>
       <div class="form-group">
         <label for="description">Description</label>
-        <input type="text" class="form-control" id="description" required>
+        <input #description type="text" class="form-control" id="description" required>
       </div>
       <div class="form-group">
         <label for="image">Image</label>
-        <input type="text" class="form-control" id="image" required>
+        <input #image type="text" class="form-control" id="image" required>
       </div>
     </form>
   </div>
   <div class="modal-footer">
     <button type="button" class="btn btn-secondary" (click)="c('Close click')">Close</button>
-    <button type="button" class="btn btn-success" (click)="c('Close click')">Add</button>
+    <button type="button" class="btn btn-success" (click)="onSubmit(title.value, author.value,
+        description.value, image.value); c('Close click')">Add</button>
   </div>
 </template>

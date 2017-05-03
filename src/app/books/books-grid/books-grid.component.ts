@@ -13,7 +13,7 @@ export class BooksGridComponent implements OnInit, OnChanges {
   @Input() newBook: Book;
   books: Book[];
   error: any;
-  
+
   constructor(private bookService: BookService) { }
 
   getBooks(): void{
@@ -27,6 +27,7 @@ export class BooksGridComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: {[propKey: string]: SimpleChange}) {
+    this.getBooks();
     for (let propertyName in changes) {
       let changedProperty = changes[propertyName];
       if (!changedProperty.isFirstChange()) {
@@ -35,7 +36,8 @@ export class BooksGridComponent implements OnInit, OnChanges {
     }
   }
 
-  deleteBook(bookId) {
+  deleteBook(bookId: any) {
+    console.log(bookId);
     this.books.splice(bookId, 1);
   }
 }

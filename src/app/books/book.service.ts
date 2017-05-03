@@ -4,7 +4,6 @@ import { Headers, Http, Response, RequestOptions} from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 
 import { Book } from './books-grid/book';
-import { contentHeaders } from './headers';
 
 @Injectable()
 export class BookService {
@@ -19,19 +18,21 @@ export class BookService {
       .get(url)
       .toPromise()
       .then((response) => {
+        console.log(response);
         return response.json().data as Book[];
       })
       .catch(this.handleError);
   }
 
 
-  private post(book: Book): Promise<Book> {
+   postBook(book: any): Promise<Book> {
+    console.log(JSON.stringify(book));
     const headers = new Headers({
       'Content-Type': 'application/json'
     });
-
+    const url = `${this.booksUrl}/add`;
     return this.http
-      .post(this.booksUrl, JSON.stringify(book), { headers: headers })
+      .post(url, book, { headers: headers })
       .toPromise()
       .then(res => res.json().data)
       .catch(this.handleError);
