@@ -12,7 +12,7 @@ export class BookService {
   constructor(private http: Http) { }
 
   getBooks(): Promise<Array<Book>> {
-    const url = `${this.booksUrl}/getAll`;
+    const url = this.booksUrl;
 
     return this.http
       .get(url)
@@ -24,13 +24,12 @@ export class BookService {
       .catch(this.handleError);
   }
 
-
-   postBook(book: any): Promise<Book> {
+  postBook(book: any): Promise<Book> {
     console.log(JSON.stringify(book));
     const headers = new Headers({
       'Content-Type': 'application/json'
     });
-    const url = `${this.booksUrl}/add`;
+    const url = this.booksUrl;
     return this.http
       .post(url, book, { headers: headers })
       .toPromise()
