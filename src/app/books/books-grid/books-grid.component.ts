@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, OnChanges, SimpleChange } from '@angular/core';
 
 import { Book } from './book';
+import { BookService } from '../book.service';
 
 @Component({
   selector: 'app-books-grid',
@@ -10,13 +11,23 @@ import { Book } from './book';
 export class BooksGridComponent implements OnInit, OnChanges {
 
   @Input() newBook: Book;
+  books: Book[];
+  error: any;
 
-  constructor() { }
+  constructor(private bookService: BookService) { }
+
+  getBooks(): void{
+    this.bookService.getBooks()
+      .then(books => this.books = books)
+      .catch(error => this.error = error);
+  }
 
   ngOnInit() {
+    this.getBooks();
   }
 
   ngOnChanges(changes: {[propKey: string]: SimpleChange}) {
+    this.getBooks();
     for (let propertyName in changes) {
       let changedProperty = changes[propertyName];
       if (!changedProperty.isFirstChange()) {
@@ -25,60 +36,8 @@ export class BooksGridComponent implements OnInit, OnChanges {
     }
   }
 
-  deleteBook(bookId) {
+  deleteBook(bookId: any) {
+    console.log(bookId);
     this.books.splice(bookId, 1);
   }
-
-  books: Book[] = [
-    {
-      id: 1,
-      title: 'Atomic Design',
-      author: 'Brad Frost',
-      description: 'Atomic Design details all that goes into creating and maintaining robust design systems.',
-      image: 'http://atomicdesign.bradfrost.com/images/book-cover.svg'
-    },
-    {
-      id: 2,
-      title: 'Atomic Design',
-      author: 'Brad Frost',
-      description: 'Atomic Design details all that goes into creating and maintaining robust design systems.',
-      image: 'http://atomicdesign.bradfrost.com/images/book-cover.svg'
-    },
-    {
-      id: 3,
-      title: 'Atomic Design',
-      author: 'Brad Frost',
-      description: 'Atomic Design details all that goes into creating and maintaining robust design systems.',
-      image: 'http://atomicdesign.bradfrost.com/images/book-cover.svg'
-    },
-    {
-      id: 4,
-      title: 'Atomic Design',
-      author: 'Brad Frost',
-      description: 'Atomic Design details all that goes into creating and maintaining robust design systems.',
-      image: 'http://atomicdesign.bradfrost.com/images/book-cover.svg'
-    },
-    {
-      id: 5,
-      title: 'Atomic Design',
-      author: 'Brad Frost',
-      description: 'Atomic Design details all that goes into creating and maintaining robust design systems.',
-      image: 'http://atomicdesign.bradfrost.com/images/book-cover.svg'
-    },
-    {
-      id: 6,
-      title: 'Atomic Design',
-      author: 'Brad Frost',
-      description: 'Atomic Design details all that goes into creating and maintaining robust design systems.',
-      image: 'http://atomicdesign.bradfrost.com/images/book-cover.svg'
-    },
-    {
-      id: 7,
-      title: 'Atomic Design',
-      author: 'Brad Frost',
-      description: 'Atomic Design details all that goes into creating and maintaining robust design systems.',
-      image: 'http://atomicdesign.bradfrost.com/images/book-cover.svg'
-    }
-  ];
-
 }
