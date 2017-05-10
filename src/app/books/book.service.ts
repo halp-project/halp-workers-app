@@ -25,7 +25,6 @@ export class BookService {
   }
 
   postBook(book: any): Promise<Book> {
-    console.log(JSON.stringify(book));
     const headers = new Headers({
       'Content-Type': 'application/json'
     });
