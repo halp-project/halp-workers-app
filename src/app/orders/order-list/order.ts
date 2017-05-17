@@ -4,7 +4,7 @@ export class Order {
     title: string;
     addressee: string;
     room: number;
-    timeAgo: number;
+    date: Date;
     state: string;
     image: string;
 
@@ -14,8 +14,17 @@ export class Order {
         title: string,
         addressee: string,
         room: number,
-        timeAgo: number,
+        date: Date,
         state: string,
         image: string
     ){}
+
+    getTimeAgo() : number{
+        let millis = this.date.getTime();
+        let now = new Date().getTime();
+        
+        console.log("ID: "+ this.id + ", time: " +((now-millis)/1000)/60);
+        
+        return ((now-millis)/1000)/60;
+    }
 }

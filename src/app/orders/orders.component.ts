@@ -28,7 +28,7 @@ export class OrdersComponent implements OnInit {
       title: 'Generic Food 1',
       addressee: 'Rupert Ellery',
       room: 101,
-      timeAgo: 5,
+      date: new Date("2013-10-19T08:23:54.000Z"),
       state: "Completed",
       image: "./assets/icons/food.svg"
     },
@@ -38,7 +38,7 @@ export class OrdersComponent implements OnInit {
       title: 'Generic Book 1',
       addressee: 'Elyzabeth Truman',
       room: 102,
-      timeAgo: 5,
+      date: new Date("2013-10-19T08:23:54.000Z"),
       state: "Completed",
       image: "./assets/icons/book.svg"
     },
@@ -48,7 +48,7 @@ export class OrdersComponent implements OnInit {
       title: 'Generic Kiosk Item 1',
       addressee: 'Sequoia Ariel',
       room: 103,
-      timeAgo: 5,
+      date: new Date("2013-10-19T08:23:54.000Z"),
       state: "Completed",
       image: "./assets/icons/newspaper.svg"
     },
@@ -58,7 +58,7 @@ export class OrdersComponent implements OnInit {
       title: 'Generic Food 2',
       addressee: 'Prabhat Olympe',
       room: 104,
-      timeAgo: 5,
+      date: new Date("2013-10-19T08:23:54.000Z"),
       state: "Completed",
       image: "./assets/icons/food.svg"
     },
@@ -68,7 +68,7 @@ export class OrdersComponent implements OnInit {
       title: 'Generic Book 2',
       addressee: 'Emma Madhukar',
       room: 105,
-      timeAgo: 5,
+      date: new Date("2013-10-19T08:23:54.000Z"),
       state: "Completed",
       image: "./assets/icons/book.svg"
     }
@@ -81,7 +81,7 @@ export class OrdersComponent implements OnInit {
       title: 'Generic Food 1',
       addressee: 'Rupert Ellery',
       room: 101,
-      timeAgo: 5,
+      date: new Date("2013-10-19T08:23:54.000Z"),
       state: "Pending",
       image: "./assets/icons/food.svg"
     },
@@ -91,7 +91,7 @@ export class OrdersComponent implements OnInit {
       title: 'Generic Book 1',
       addressee: 'Elyzabeth Truman',
       room: 102,
-      timeAgo: 5,
+      date: new Date("2013-10-19T08:23:54.000Z"),
       state: "Pending",
       image: "./assets/icons/book.svg"
     },
@@ -101,7 +101,7 @@ export class OrdersComponent implements OnInit {
       title: 'Generic Kiosk Item 1',
       addressee: 'Sequoia Ariel',
       room: 103,
-      timeAgo: 5,
+      date: new Date("2013-10-19T08:23:54.000Z"),
       state: "Pending",
       image: "./assets/icons/newspaper.svg"
     },
@@ -111,7 +111,7 @@ export class OrdersComponent implements OnInit {
       title: 'Generic Food 2',
       addressee: 'Prabhat Olympe',
       room: 104,
-      timeAgo: 5,
+      date: new Date("2013-10-19T08:23:54.000Z"),
       state: "Pending",
       image: "./assets/icons/food.svg"
     },
@@ -121,7 +121,7 @@ export class OrdersComponent implements OnInit {
       title: 'Generic Book 2',
       addressee: 'Emma Madhukar',
       room: 105,
-      timeAgo: 5,
+      date: new Date("2013-10-19T08:23:54.000Z"),
       state: "Pending",
       image: "./assets/icons/book.svg"
     }
