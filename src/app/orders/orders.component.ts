@@ -22,108 +22,28 @@ export class OrdersComponent implements OnInit {
   onSubmit() { this.submitted = true; }
 
   ordersCompleted: Order[] = [
-    {
-      id: 1,
-      type: 'food',
-      title: 'Generic Food 1',
-      addressee: 'Rupert Ellery',
-      room: 101,
-      date: new Date("2013-10-19T08:23:54.000Z"),
-      state: "Completed",
-      image: "./assets/icons/food.svg"
-    },
-    {
-      id: 2,
-      type: 'book',
-      title: 'Generic Book 1',
-      addressee: 'Elyzabeth Truman',
-      room: 102,
-      date: new Date("2013-10-19T08:23:54.000Z"),
-      state: "Completed",
-      image: "./assets/icons/book.svg"
-    },
-    {
-      id: 3,
-      type: 'kiosk',
-      title: 'Generic Kiosk Item 1',
-      addressee: 'Sequoia Ariel',
-      room: 103,
-      date: new Date("2013-10-19T08:23:54.000Z"),
-      state: "Completed",
-      image: "./assets/icons/newspaper.svg"
-    },
-    {
-      id: 4,
-      type: 'food',
-      title: 'Generic Food 2',
-      addressee: 'Prabhat Olympe',
-      room: 104,
-      date: new Date("2013-10-19T08:23:54.000Z"),
-      state: "Completed",
-      image: "./assets/icons/food.svg"
-    },
-    {
-      id: 5,
-      type: 'book',
-      title: 'Generic Book 2',
-      addressee: 'Emma Madhukar',
-      room: 105,
-      date: new Date("2013-10-19T08:23:54.000Z"),
-      state: "Completed",
-      image: "./assets/icons/book.svg"
-    }
-  ];
-
+      new Order(1, 'food', 'Generic Food 1', 'Rupert Ellery',
+        101, new Date("2017-05-17T08:23:54.000Z"), 'Completed'),
+      new Order(2, 'book', 'Generic Book 1', 'Elyzabeth Truman',
+        102, new Date("2013-10-19T08:23:54.000Z"), "Completed"),
+      new Order(3, 'item', 'Generic Kiosk Item 1', 'Sequoia Ariel',
+        103, new Date("2013-10-19T08:23:54.000Z"), "Completed"),
+      new Order(4, 'food', 'Generic Food 2', 'Prabhat Olympe',
+        104, new Date("2013-10-19T08:23:54.000Z"), "Completed"),
+      new Order(5, 'book', 'Generic Book 2', 'Emma Madhukar',
+        105, new Date("2013-10-19T08:23:54.000Z"), "Completed")
+    ];
+    
   ordersPending: Order[] = [
-    {
-      id: 1,
-      type: 'food',
-      title: 'Generic Food 1',
-      addressee: 'Rupert Ellery',
-      room: 101,
-      date: new Date("2013-10-19T08:23:54.000Z"),
-      state: "Pending",
-      image: "./assets/icons/food.svg"
-    },
-    {
-      id: 2,
-      type: 'book',
-      title: 'Generic Book 1',
-      addressee: 'Elyzabeth Truman',
-      room: 102,
-      date: new Date("2013-10-19T08:23:54.000Z"),
-      state: "Pending",
-      image: "./assets/icons/book.svg"
-    },
-    {
-      id: 3,
-      type: 'kiosk',
-      title: 'Generic Kiosk Item 1',
-      addressee: 'Sequoia Ariel',
-      room: 103,
-      date: new Date("2013-10-19T08:23:54.000Z"),
-      state: "Pending",
-      image: "./assets/icons/newspaper.svg"
-    },
-    {
-      id: 4,
-      type: 'food',
-      title: 'Generic Food 2',
-      addressee: 'Prabhat Olympe',
-      room: 104,
-      date: new Date("2013-10-19T08:23:54.000Z"),
-      state: "Pending",
-      image: "./assets/icons/food.svg"
-    },
-    {
-      id: 5,
-      type: 'book',
-      title: 'Generic Book 2',
-      addressee: 'Emma Madhukar',
-      room: 105,
-      date: new Date("2013-10-19T08:23:54.000Z"),
-      state: "Pending",
-      image: "./assets/icons/book.svg"
-    }
-  ];
+      new Order(1, 'food', 'Generic Food 1', 'Rupert Ellery',
+        101, new Date("2013-10-19T08:23:54.000Z"), 'Pending'),
+      new Order(2, 'book', 'Generic Book 1', 'Elyzabeth Truman',
+        102, new Date("2013-10-19T08:23:54.000Z"), "Pending"),
+      new Order(3, 'item', 'Generic Kiosk Item 1', 'Sequoia Ariel',
+        103, new Date("2013-10-19T08:23:54.000Z"), "Pending"),
+      new Order(4, 'food', 'Generic Food 2', 'Prabhat Olympe',
+        104, new Date("2013-10-19T08:23:54.000Z"), "Pending"),
+      new Order(5, 'book', 'Generic Book 2', 'Emma Madhukar',
+        105, new Date("2013-10-19T08:23:54.000Z"), "Pending")
+    ];
 }

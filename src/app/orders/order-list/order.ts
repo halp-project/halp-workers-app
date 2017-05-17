@@ -15,16 +15,32 @@ export class Order {
         addressee: string,
         room: number,
         date: Date,
-        state: string,
-        image: string
-    ){}
+        state: string
+    )
+    
+    {   this.id = id;
+        this.type = type;
+        this.title = title;
+        this.addressee = addressee;
+        this.room = room;
+        this.date = date;
+        this.state = state;
+        
+        if(type == 'book'){
+            this.image = './assets/icons/book.svg'; 
+        } else if(type == 'item'){
+            this.image = './assets/icons/newspaper.svg'; 
+        } else{
+            this.image = './assets/icons/food.svg'; 
+        }
+    }
 
-    getTimeAgo() : number{
+    getTimeAgo(){
         let millis = this.date.getTime();
         let now = new Date().getTime();
         
         console.log("ID: "+ this.id + ", time: " +((now-millis)/1000)/60);
         
-        return ((now-millis)/1000)/60;
+        return Math.trunc(((now-millis)/1000)/60);
     }
 }
