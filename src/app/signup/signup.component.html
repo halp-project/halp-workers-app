@@ -5,17 +5,6 @@
   <form novalidate #f="ngForm" (ngSubmit)="onSubmit(f)">
 
     <br>
-    <input id="name" type="text" placeholder="Enter your full name" name="name" ngModel #userRealName="ngModel" minlength="2"
-      maxlength="35" class="form-control" required>
-
-    <div *ngIf="userRealName.errors?.required && userRealName.touched" class="text-danger">
-      Name is required
-    </div>
-    <div *ngIf="userRealName.errors?.minlength && userRealName.touched" class="text-danger">
-      Minimum of 2 characters
-    </div>
-
-    <br>
     <input id="username" type="text" placeholder="Enter a username" name="username" ngModel #userName="ngModel" minlength="4"
       maxlength="20" class="form-control" required>
 
