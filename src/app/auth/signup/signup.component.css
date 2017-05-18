@@ -1,35 +1,6 @@
-#button-login {
-    position: fixed;
-    left: 50%;
-    transform: translate(0, +5%);
+.ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid #42A948; /* green */
 }
-
-#signup-form {
-    position: fixed;
-    left: 30%;
-    top: 20%;
-}
-
-#name {
- width: 30%;
-}
-
-#username {
- width: 30%;
-}
-
-#pass {
- width: 30%;
-}
-
-#pass2 {
- width: 30%;
-}
-
-#adm {
- width: 30%;
-}
-
-.button-box {
-    margin-bottom: 0.5em;
+.ng-invalid:not(form)  {
+  border-left: 5px solid #a94442; /* red */
 }

@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
+import { AuthService } from '../auth.service';
+
+import { Worker } from '../worker';
+
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
@@ -10,18 +14,24 @@ export class SignupComponent implements OnInit {
   adminRole: string;
   router: Router;
 
-  constructor() { }
+  workerToSignUp: Worker = new Worker();
+
+  roles = [
+    'assistant',
+    'book',
+    'food',
+    'kiosk',
+    'admin'
+  ]
+
+  constructor(
+    private authService: AuthService) { }
 
   ngOnInit() {
-
   }
 
-  navigate() {
-    this.router.navigateByUrl('/' + this.adminRole);
-  }
-
-  change() {
-    console.log(this.adminRole);
+  onSubmit() {
+    this.authService.signUp(this.workerToSignUp);
   }
 
 }
