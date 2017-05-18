@@ -14,6 +14,6 @@ import { SignupComponent } from './signup.component';
     SignupRoutingModule,
     NgbModule
   ],
-  declarations: [ SignupComponent ]
+  declarations: [SignupComponent]
 })
 export class SignupModule { }

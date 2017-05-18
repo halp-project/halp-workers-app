@@ -7,6 +7,6 @@ import { SignupComponent } from './signup.component';
   imports: [RouterModule.forChild([
     { path: 'signup', component: SignupComponent }
   ])],
-  exports: [ RouterModule ]
+  exports: [RouterModule]
 })
-export class SignupRoutingModule {}
+export class SignupRoutingModule { }
