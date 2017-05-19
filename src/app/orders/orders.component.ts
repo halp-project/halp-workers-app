@@ -43,7 +43,7 @@ export class OrdersComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: {[propKey: string]: SimpleChange}) {
-    
+    this.getOrders();
   }
 
   onSubmit() { this.submitted = true; }

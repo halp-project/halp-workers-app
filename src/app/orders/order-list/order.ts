@@ -39,8 +39,6 @@ export class Order {
         let millis = this.date.getTime();
         let now = new Date().getTime();
         
-        console.log("ID: "+ this.id + ", time: " +((now-millis)/1000)/60);
-        
         return Math.trunc(((now-millis)/1000)/60);
     }
 }

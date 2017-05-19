@@ -36,6 +36,35 @@ export class OrderService {
       .catch(this.handleError);
   }
 
+
+  updateOrder(id: number, order: Order): Promise<any> {
+    const url = this.ordersUrl+"/"+id;
+    const headers = new Headers({
+      'Content-Type': 'application/json'
+    });
+    var res;
+    return this.http
+      .put(url, order)
+      .toPromise()
+      .then(() => "done")
+      .catch(this.handleError);
+  }
+
+
+  deleteOrder(id: number): Promise<any> {
+    const url = this.ordersUrl+"/"+id;
+    const headers = new Headers({
+      'Content-Type': 'application/json'
+    });
+    var res;
+    return this.http
+      .delete(url)
+      .toPromise()
+      .then(() => "done")
+      .catch(this.handleError);
+  }
+
+
   private handleError(error: any): Promise<any> {
     console.error('An error occurred', error);
     return Promise.reject(error.message || error);
