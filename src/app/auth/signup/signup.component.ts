@@ -12,14 +12,13 @@ import { Worker } from '../worker';
 })
 export class SignupComponent implements OnInit {
   adminRole: string;
-
   workerToSignUp: Worker = new Worker();
-
   roles = [
     'assistant',
     'book',
     'admin'
-  ]
+  ];
+  errorMessage: string = '';
 
   constructor(
     private authService: AuthService,
@@ -29,12 +28,20 @@ export class SignupComponent implements OnInit {
   }
 
   onSubmit() {
-    this.authService.signUp(this.workerToSignUp).then((response) => {
-      if (response.json().token) {
+    this.authService.signUp(this.workerToSignUp)
+      .then((response) => {
         localStorage.setItem('id_token', response.json().token);
         this.routingByRole(this.workerToSignUp.role);
-      }
-    });
+      })
+      .catch((error: any) => {
+        if (error.status === 400) {
+          this.errorMessage = 'Please, complete all fields.';
+        } else if (error.status === 409) {
+          this.errorMessage = 'A user with that username already exists.'
+        } else {
+          this.errorMessage = 'Error creating the user.'
+        }
+      });
   }
 
   routingByRole(role: string): void {
