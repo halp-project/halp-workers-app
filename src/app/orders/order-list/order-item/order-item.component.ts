@@ -18,7 +18,7 @@ export class OrderItemComponent implements OnInit {
   }
 
   action() {
-    if (this.order.state == "Completed") {
+    if (this.order.completed) {
       this._delete.emit(this.order.id);
     } else {
       this._delete.emit(this.order.id);
@@ -30,7 +30,7 @@ export class OrderItemComponent implements OnInit {
   }
 
   getButtonClass() {
-    if (this.order.state == "Completed") {
+    if (this.order.completed) {
       return "btn btn-primary";
     } else {
       return "btn btn-success";
@@ -38,7 +38,7 @@ export class OrderItemComponent implements OnInit {
   }
 
   getButtonImg() {
-    if (this.order.state == "Completed") {
+    if (this.order.completed) {
       return "fa fa-undo";
     } else {
       return "fa fa-check-circle-o";

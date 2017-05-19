@@ -11,20 +11,27 @@ export class OrderService {
 
   constructor(private http: Http) { }
 
-  getBooks(): Promise<Array<Order>> {
+  getOrders(): Promise<Array<Order>> {
     const url = this.ordersUrl;
 
     return this.http
       .get(url)
       .toPromise()
-      .then((response) => {
-        console.log(response);
-        let orderArray: Order[];
+      .then(response => {
+        let orders: Order[] = [];
+        let o : Order;
         for(let i = 0; i < response.json().data.length; i ++) {
-          let o : Order;
-          o = new Order(response.json().data.get('id'), response.json().data.get('type'),);
+          o = new Order(response.json().data[i].id, 
+                        response.json().data[i].type,
+                        response.json().data[i].title,
+                        response.json().data[i].name 
+                        + " " + response.json().data[i].lastname,
+                        response.json().data[i].room,
+                        new Date(response.json().data[i].orderdate),
+                        response.json().data[i].completed);
+          orders.push(o);
         }
-        return response.json().data as Book[];
+        return orders as Order[];
       })
       .catch(this.handleError);
   }

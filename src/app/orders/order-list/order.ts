@@ -5,7 +5,7 @@ export class Order {
     addressee: string;
     room: number;
     date: Date;
-    state: string;
+    completed: boolean;
     image: string;
 
     constructor(
@@ -15,7 +15,7 @@ export class Order {
         addressee: string,
         room: number,
         date: Date,
-        state: string
+        completed: boolean
     )
     
     {   this.id = id;
@@ -24,7 +24,7 @@ export class Order {
         this.addressee = addressee;
         this.room = room;
         this.date = date;
-        this.state = state;
+        this.completed = completed;
         
         if(type == 'book'){
             this.image = './assets/icons/book.svg'; 
