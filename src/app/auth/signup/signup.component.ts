@@ -12,7 +12,6 @@ import { Worker } from '../worker';
 })
 export class SignupComponent implements OnInit {
   adminRole: string;
-  router: Router;
 
   workerToSignUp: Worker = new Worker();
 
@@ -25,13 +24,48 @@ export class SignupComponent implements OnInit {
   ]
 
   constructor(
-    private authService: AuthService) { }
+    private authService: AuthService,
+    public router: Router) { }
 
   ngOnInit() {
   }
 
   onSubmit() {
-    this.authService.signUp(this.workerToSignUp);
+    this.authService.signUp(this.workerToSignUp).then((response) => {
+      if (response.json().token) {
+        localStorage.setItem('id_token', response.json().token);
+        this.routingByRole(this.workerToSignUp.role);
+      }
+    });
+  }
+
+  routingByRole(role: string): void {
+    switch (role) {
+      case 'assistant': {
+        this.router.navigate(['orders']);
+        break;
+      }
+
+      case 'book': {
+        this.router.navigate(['books']);
+        break;
+      }
+
+      case 'food': {
+        this.router.navigate(['meals']);
+        break;
+      }
+
+      case 'kiosk': {
+        this.router.navigate(['kiosk']);
+        break;
+      }
+
+      case 'admin': {
+        this.router.navigate(['patients']);
+        break;
+      }
+    }
   }
 
 }

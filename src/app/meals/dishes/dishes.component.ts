@@ -10,10 +10,9 @@ import { Dish } from './dishes-grid/dish';
 })
 export class DishesComponent implements OnInit {
   dish: Dish;
+  closeResult: string;
 
   state = 0;
-
-  closeResult: string;
   id = 7;
   submitted = false;
 
@@ -23,7 +22,6 @@ export class DishesComponent implements OnInit {
   }
 
   onSubmit() { this.submitted = true; }
-
 
   openNewDishModal(content) {
     this.modalService.open(content).result.then((result) => {
@@ -39,7 +37,7 @@ export class DishesComponent implements OnInit {
     } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
       return 'by clicking on a backdrop';
     } else {
-      return  `with: ${reason}`;
+      return `with: ${reason}`;
     }
   }
 }

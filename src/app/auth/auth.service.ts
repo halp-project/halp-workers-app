@@ -10,7 +10,7 @@ export class AuthService {
 
   constructor(private http: Http) { }
 
-  signUp(worker: Worker) {
+  signUp(worker: Worker): Promise<Response> {
     const headers = new Headers({
       'Content-Type': 'application/json'
     });
@@ -19,7 +19,7 @@ export class AuthService {
       .post(this.url + '/workers/signup', JSON.stringify(worker), { headers: headers })
       .toPromise()
       .then(res => {
-        console.log(res.json())
+        return res;
       })
       .catch(this.handleError);
   }

@@ -4,12 +4,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { DishesComponent } from './dishes.component';
 import { DishesGridComponent } from './dishes-grid/dishes-grid.component';
 
-
-
 @NgModule({
   imports: [RouterModule.forChild([
     { path: 'dishes', component: DishesComponent }
   ])],
-  exports: [ RouterModule ]
+  exports: [RouterModule]
 })
-export class DishesRoutingModule {}
+export class DishesRoutingModule { }

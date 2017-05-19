@@ -10,8 +10,7 @@ import { BooksModule } from './books/books.module';
 import { OrdersModule } from './orders/orders.module';
 import { KioskModule } from './kiosk/kiosk.module';
 import { PatientsModule } from './patients/patients.module';
-import { DishesModule } from './dishes/dishes.module';
-import { MenusModule } from './menus/menus.module';
+import { MealsModule } from './meals/meals.module';
 
 import { AppComponent } from './app.component';
 
@@ -25,8 +24,7 @@ import { AppComponent } from './app.component';
     HttpModule,
     BooksModule,
     KioskModule,
-    DishesModule,
-    MenusModule,
+    MealsModule,
     AuthModule,
     OrdersModule,
     PatientsModule,
