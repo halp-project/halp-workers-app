@@ -29,10 +29,6 @@ export class PatientsComponent implements OnInit {
     });
   }
 
-  editPatient(patient) {
-
-  }
-
   private getDismissReason(reason: any): string {
     if (reason === ModalDismissReasons.ESC) {
       return 'by pressing ESC';

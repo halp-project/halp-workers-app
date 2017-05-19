@@ -1,24 +1,21 @@
-
-#button-register {
-    position: fixed;
-    left: 50%;
-    transform: translate(0, +5%);
+.ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid #42A948;
 }
 
-#login {
-    position: fixed;
-    left: 30%;
-    top: 20%;
+.ng-invalid:not(form)  {
+  border-left: 5px solid #a94442;
 }
 
-#username {
- width: 30%;
+#form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-#pass {
- width: 30%;
+#form {
+  padding-top: 10%;
 }
 
-.button-box {
-    margin-bottom: 0.5em;
+#error-message {
+  color: red;
 }
