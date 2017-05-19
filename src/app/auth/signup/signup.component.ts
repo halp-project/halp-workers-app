@@ -18,8 +18,6 @@ export class SignupComponent implements OnInit {
   roles = [
     'assistant',
     'book',
-    'food',
-    'kiosk',
     'admin'
   ]
 
@@ -48,16 +46,6 @@ export class SignupComponent implements OnInit {
 
       case 'book': {
         this.router.navigate(['books']);
-        break;
-      }
-
-      case 'food': {
-        this.router.navigate(['meals']);
-        break;
-      }
-
-      case 'kiosk': {
-        this.router.navigate(['kiosk']);
         break;
       }
 
