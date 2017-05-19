@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 
 import { Book } from './books-grid/book';
+import { BookService } from './book.service';
 
 @Component({
   selector: 'app-books',
@@ -14,12 +15,17 @@ export class BooksComponent implements OnInit {
   id = 7;
   submitted = false;
 
-  constructor(private modalService: NgbModal) { }
+  constructor(private modalService: NgbModal, private bookService: BookService) { }
 
   ngOnInit() {
   }
 
-  onSubmit() { this.submitted = true; }
+  onSubmit(title, author, description, image) {
+    this.newBook=new Book(1, title, author, description, image);
+    console.log(JSON.stringify(this.newBook));
+    this.bookService.postBook(JSON.stringify({ title: title, author: author, description: description, image: image }));
+    this.submitted = true; 
+  }
 
   openNewBookModal(content) {
     this.modalService.open(content).result.then((result) => {

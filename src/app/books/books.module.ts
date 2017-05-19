@@ -5,12 +5,14 @@ import { BooksRoutingModule } from './books-routing.module';
 import { BooksComponent } from './books.component';
 import { BooksGridComponent } from './books-grid/books-grid.component';
 import { BookCardComponent } from './books-grid/book-card/book-card.component';
+import { BookService} from './book.service';
 
 @NgModule({
   imports: [
     CommonModule,
     BooksRoutingModule
   ],
-  declarations: [ BooksComponent, BooksGridComponent, BookCardComponent ]
+  declarations: [ BooksComponent, BooksGridComponent, BookCardComponent ],
+  providers: [BookService]
 })
 export class BooksModule { }
