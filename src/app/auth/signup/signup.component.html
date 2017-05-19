@@ -1,7 +1,10 @@
-<div class="container">
+<div class="container" id="form">
   <div class="row justify-content-center">
     <div class="col-4">
-      <h1>Signup</h1>
+      <div id="form-header">
+        <h1 class>Signup</h1>
+        <a href="/">Login</a>
+      </div>
       <form (ngSubmit)="onSubmit()" #signupForm="ngForm">
         <div class="form-group">
           <label for="username">Username</label>
