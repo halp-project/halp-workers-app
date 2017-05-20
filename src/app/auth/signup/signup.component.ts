@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { AuthService } from '../auth.service';
-
 import { Worker } from '../worker';
 
 @Component({
@@ -11,7 +10,6 @@ import { Worker } from '../worker';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
-  adminRole: string;
   workerToSignUp: Worker = new Worker();
   roles = [
     'assistant',

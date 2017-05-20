@@ -1,38 +1,23 @@
-<div class="container" id="login">
-
-  <h1>Halp <button routerLink="signup" routerLinkActive="active" type="button" class="btn btn-primary" id="button-register">Signup</button></h1>
-
-  <br>
-
-  <form novalidate #g="ngForm" (submit)="add(g.valid)">
-    <br>
-    <div ngModelGroup="pass" #userPass="ngModelGroup">
-      <label for="username">Username</label>
-      <input id="username" type="text" name="username" ngModel #userRealName="ngModel" minlength="4" maxlength="20" class="form-control" required>
-
-      <br>
-
-      <label for="password">Password</label>
-      <input id="pass" type="password" name="password" ngModel #userPass1="ngModel" class="form-control" minlength="6" maxlength="20" required>
-
-      <div *ngIf="userPass.invalid && userPass.touched " class="text-danger">
-        Valid username and password required
+<div class="container" id="form">
+  <div class="row justify-content-center">
+    <div class="col-4">
+      <div id="form-header">
+        <h1 class>Login</h1>
+        <a href="/signup">Signup</a>
       </div>
+      <form (ngSubmit)="onSubmit()" #signupForm="ngForm">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" class="form-control" id="username" required [(ngModel)]="workerToLogIn.username" name="username" #name="ngModel">
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" id="password" [(ngModel)]="workerToLogIn.password" name="password">
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+      <br>
+      <p id="error-message">{{ this.errorMessage }}</p>
     </div>
-    <br>
-
-  </form>
-
-  <div class="button-box">
-    <button routerLink="../orders" routerLinkActive="active" class="btn btn-success">Signup Orders</button>        
-    <button routerLink="../books" routerLinkActive="active" class="btn btn-success">Signup Books</button>
   </div>
-  <div class="button-box">
-    <button routerLink="../kiosk" routerLinkActive="active" class="btn btn-success">Signup Shop</button>
-    <button routerLink="../menus" routerLinkActive="active" class="btn btn-success">Signup Menus</button>
-  </div>
-  <div class="button-box">
-    <button routerLink="../patients" routerLinkActive="active" class="btn btn-success">Signup Patiens</button>
-  </div>
-
 </div>
