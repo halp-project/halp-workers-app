@@ -5,7 +5,6 @@ export const routes: Routes = [
   { path: '', loadChildren: 'app/auth/auth.module#AuthModule' },
   { path: 'books', loadChildren: 'app/books/books.module#BooksModule' },
   { path: 'orders', loadChildren: 'app/orders/orders.module#OrdersModule' },
-  { path: 'patients', loadChildren: 'app/patients/patients.module#PatientsModule' }
 ];
 
 @NgModule({

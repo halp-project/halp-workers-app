@@ -8,8 +8,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AuthModule } from './auth/auth.module';
 import { BooksModule } from './books/books.module';
 import { OrdersModule } from './orders/orders.module';
-import { PatientsModule } from './patients/patients.module';
-
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -23,7 +21,6 @@ import { AppComponent } from './app.component';
     BooksModule,
     AuthModule,
     OrdersModule,
-    PatientsModule,
     AppRoutingModule,
     NgbModule.forRoot()
   ],
