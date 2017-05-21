@@ -1,129 +1,76 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges, SimpleChange } from '@angular/core';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 
 import { Order } from './order-list/order';
+import { OrderService } from './order.service';
 
 @Component({
   selector: 'app-orders',
   templateUrl: './orders.component.html',
   styleUrls: ['./orders.component.css']
 })
-export class OrdersComponent implements OnInit {
+export class OrdersComponent implements OnInit, OnChanges {
   oreder: Order;
   closeResult: string;
   id = 10;
   submitted = false;
 
-  constructor(private modalService: NgbModal) { }
+  ordersCompleted: Order[] = [];
+  ordersPending: Order[] = [];
+
+  error: any;
+
+  constructor(private modalService: NgbModal, private orderService: OrderService) { }
+
+  getOrders(): void{
+    this.orderService.getOrders()
+      .then(orders => {
+        for(let i = 0; i < orders.length; i++) {
+          if(orders[i].completed){
+            this.ordersCompleted.push(orders[i]);
+          }else{
+            this.ordersPending.push(orders[i]);
+          }
+        }
+      })
+      .catch(error => this.error = error);
+
+    
+  }
 
   ngOnInit() {
+    this.getOrders();
+  }
+
+  ngOnChanges(changes: {[propKey: string]: SimpleChange}) {
+    this.getOrders();
   }
 
   onSubmit() { this.submitted = true; }
 
-  ordersCompleted: Order[] = [
-    {
-      id: 1,
-      type: 'food',
-      title: 'Generic Food 1',
-      addressee: 'Rupert Ellery',
-      room: 101,
-      timeAgo: 5,
-      state: "Completed",
-      image: "./assets/icons/food.svg"
-    },
-    {
-      id: 2,
-      type: 'book',
-      title: 'Generic Book 1',
-      addressee: 'Elyzabeth Truman',
-      room: 102,
-      timeAgo: 5,
-      state: "Completed",
-      image: "./assets/icons/book.svg"
-    },
-    {
-      id: 3,
-      type: 'kiosk',
-      title: 'Generic Kiosk Item 1',
-      addressee: 'Sequoia Ariel',
-      room: 103,
-      timeAgo: 5,
-      state: "Completed",
-      image: "./assets/icons/newspaper.svg"
-    },
-    {
-      id: 4,
-      type: 'food',
-      title: 'Generic Food 2',
-      addressee: 'Prabhat Olympe',
-      room: 104,
-      timeAgo: 5,
-      state: "Completed",
-      image: "./assets/icons/food.svg"
-    },
-    {
-      id: 5,
-      type: 'book',
-      title: 'Generic Book 2',
-      addressee: 'Emma Madhukar',
-      room: 105,
-      timeAgo: 5,
-      state: "Completed",
-      image: "./assets/icons/book.svg"
-    }
-  ];
-
+  /*ordersCompleted: Order[] = [
+      new Order(1, 'food', 'Generic Food 1', 'Rupert Ellery',
+        101, new Date("2017-05-17T08:23:54.000Z"), true),
+      new Order(2, 'book', 'Generic Book 1', 'Elyzabeth Truman',
+        102, new Date("2013-10-19T08:23:54.000Z"), true),
+      new Order(3, 'item', 'Generic Kiosk Item 1', 'Sequoia Ariel',
+        103, new Date("2013-10-19T08:23:54.000Z"), true),
+      new Order(4, 'food', 'Generic Food 2', 'Prabhat Olympe',
+        104, new Date("2013-10-19T08:23:54.000Z"), true),
+      new Order(5, 'book', 'Generic Book 2', 'Emma Madhukar',
+        105, new Date("2013-10-19T08:23:54.000Z"), true)
+    ];
+    
   ordersPending: Order[] = [
-    {
-      id: 1,
-      type: 'food',
-      title: 'Generic Food 1',
-      addressee: 'Rupert Ellery',
-      room: 101,
-      timeAgo: 5,
-      state: "Pending",
-      image: "./assets/icons/food.svg"
-    },
-    {
-      id: 2,
-      type: 'book',
-      title: 'Generic Book 1',
-      addressee: 'Elyzabeth Truman',
-      room: 102,
-      timeAgo: 5,
-      state: "Pending",
-      image: "./assets/icons/book.svg"
-    },
-    {
-      id: 3,
-      type: 'kiosk',
-      title: 'Generic Kiosk Item 1',
-      addressee: 'Sequoia Ariel',
-      room: 103,
-      timeAgo: 5,
-      state: "Pending",
-      image: "./assets/icons/newspaper.svg"
-    },
-    {
-      id: 4,
-      type: 'food',
-      title: 'Generic Food 2',
-      addressee: 'Prabhat Olympe',
-      room: 104,
-      timeAgo: 5,
-      state: "Pending",
-      image: "./assets/icons/food.svg"
-    },
-    {
-      id: 5,
-      type: 'book',
-      title: 'Generic Book 2',
-      addressee: 'Emma Madhukar',
-      room: 105,
-      timeAgo: 5,
-      state: "Pending",
-      image: "./assets/icons/book.svg"
-    }
-  ];
+      new Order(1, 'food', 'Generic Food 1', 'Rupert Ellery',
+        101, new Date("2013-10-19T08:23:54.000Z"), false),
+      new Order(2, 'book', 'Generic Book 1', 'Elyzabeth Truman',
+        102, new Date("2013-10-19T08:23:54.000Z"), false),
+      new Order(3, 'item', 'Generic Kiosk Item 1', 'Sequoia Ariel',
+        103, new Date("2013-10-19T08:23:54.000Z"), false),
+      new Order(4, 'food', 'Generic Food 2', 'Prabhat Olympe',
+        104, new Date("2013-10-19T08:23:54.000Z"), false),
+      new Order(5, 'book', 'Generic Book 2', 'Emma Madhukar',
+        105, new Date("2013-10-19T08:23:54.000Z"), false)
+  ];*/
 }

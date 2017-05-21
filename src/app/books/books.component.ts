@@ -24,7 +24,8 @@ export class BooksComponent implements OnInit {
     this.newBook=new Book(1, title, author, description, image);
     console.log(JSON.stringify(this.newBook));
     this.bookService.postBook(JSON.stringify({ title: title, author: author, description: description, image: image }));
-    this.submitted = true; 
+    location.reload();
+    this.submitted = true;
   }
 
   openNewBookModal(content) {

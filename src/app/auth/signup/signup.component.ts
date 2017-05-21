@@ -13,8 +13,7 @@ export class SignupComponent implements OnInit {
   workerToSignUp: Worker = new Worker();
   roles = [
     'assistant',
-    'book',
-    'admin'
+    'book'
   ];
   errorMessage: string = '';
 

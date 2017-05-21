@@ -6,12 +6,13 @@ import { OrdersRoutingModule } from './orders-routing.module';
 import { OrdersComponent } from './orders.component';
 import { OrdersListComponent } from './order-list/orders-list.component';
 import { OrderItemComponent } from './order-list/order-item/order-item.component';
-
+import { OrderService } from './order.service';
 @NgModule({
   imports: [
     CommonModule,
     OrdersRoutingModule
   ],
-  declarations: [ OrdersComponent, OrdersListComponent, OrderItemComponent ]
+  declarations: [ OrdersComponent, OrdersListComponent, OrderItemComponent ],
+  providers:[OrderService]
 })
 export class OrdersModule { }
