@@ -1,0 +1,23 @@
+<div class="container" id="form">
+  <div class="row justify-content-center">
+    <div class="col-4">
+      <div id="form-header">
+        <h1 class>Login</h1>
+        <a href="/signup">Signup</a>
+      </div>
+      <form (ngSubmit)="onSubmit()" #signupForm="ngForm">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" class="form-control" id="username" required [(ngModel)]="workerToLogIn.username" name="username" #name="ngModel">
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" id="password" [(ngModel)]="workerToLogIn.password" name="password">
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+      <br>
+      <p id="error-message">{{ this.errorMessage }}</p>
+    </div>
+  </div>
+</div>

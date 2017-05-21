@@ -6,6 +6,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AuthRoutingModule } from './auth-routing.module';
 
 import { AuthComponent } from './auth.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
+
+import { AuthService } from './auth.service';
 
 @NgModule({
   imports: [
@@ -14,6 +18,11 @@ import { AuthComponent } from './auth.component';
     AuthRoutingModule,
     NgbModule
   ],
-  declarations: [ AuthComponent ]
+  declarations: [ 
+    AuthComponent,
+    LoginComponent,
+    SignupComponent
+  ],
+  providers: [AuthService]
 })
 export class AuthModule { }

@@ -9,7 +9,6 @@ import { Order } from './order';
 })
 export class OrdersListComponent implements OnInit, OnChanges {
 
-  @Input() myOrder: Order;
   @Input() orders : Order[];
 
   constructor() { }
