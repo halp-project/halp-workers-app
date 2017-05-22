@@ -27,7 +27,7 @@ export class SignupComponent implements OnInit {
   onSubmit() {
     this.authService.signUp(this.workerToSignUp)
       .then((response) => {
-        localStorage.setItem('id_token', response.json().token);
+        localStorage.setItem('id_token', response.json().id_token);
         this.routingByRole(this.workerToSignUp.role);
       })
       .catch((error: any) => {

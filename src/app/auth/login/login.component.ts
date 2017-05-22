@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
   onSubmit() {
     this.authService.logIn(this.workerToLogIn)
       .then((response) => {
-        localStorage.setItem('id_token', response.json().token);
+        localStorage.setItem('id_token', response.json().id_token);
         this.routingByRole(response.json().role);
       })
       .catch((error: any) => {
