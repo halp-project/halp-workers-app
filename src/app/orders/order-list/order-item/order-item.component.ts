@@ -30,6 +30,7 @@ export class OrderItemComponent implements OnInit {
   }
 
   delete() {
+    console.log(this.order.id);
     this.orderService.deleteOrder(this.order.id);
     location.reload();
   }
