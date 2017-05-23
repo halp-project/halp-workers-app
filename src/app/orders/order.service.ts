@@ -21,10 +21,10 @@ export class OrderService {
         let orders: Order[] = [];
         let o : Order;
         for(let i = 0; i < response.json().data.length; i ++) {
-          o = new Order(response.json().data[i].id, 
+          o = new Order(response.json().data[i].id,
                         response.json().data[i].type,
                         response.json().data[i].title,
-                        response.json().data[i].name 
+                        response.json().data[i].name
                         + " " + response.json().data[i].lastname,
                         response.json().data[i].room,
                         new Date(response.json().data[i].orderdate),
