@@ -17,9 +17,18 @@ export class BookService {
     return this.http
       .get(url)
       .toPromise()
-      .then((response) => {
-        console.log(response);
-        return response.json().data as Book[];
+      .then(response => {
+        let books: Book[] = [];
+        let b : Book;
+        for(let i = 0; i < response.json().data.length; i ++) {
+          b = new Book(response.json().data[i].id,
+                        response.json().data[i].title,
+                        response.json().data[i].author,
+                        response.json().data[i].description,
+                        response.json().data[i].image);
+          books.push(b);
+        }
+        return books as Book[];
       })
       .catch(this.handleError);
   }
@@ -33,6 +42,32 @@ export class BookService {
       .post(url, book, { headers: headers })
       .toPromise()
       .then(res => res.json().data)
+      .catch(this.handleError);
+  }
+
+  editBook(id: number, book: Book): Promise<any> {
+    const url = this.booksUrl+"/"+id;
+    const headers = new Headers({
+      'Content-Type': 'application/json'
+    });
+    var res;
+    return this.http
+      .put(url, book)
+      .toPromise()
+      .then(() => "done")
+      .catch(this.handleError);
+  }
+
+  deleteBook(id: number): Promise<any> {
+    const url = this.booksUrl+"/"+id;
+    const headers = new Headers({
+      'Content-Type': 'application/json'
+    });
+    var res;
+    return this.http
+      .delete(url)
+      .toPromise()
+      .then(() => "done")
       .catch(this.handleError);
   }
 
