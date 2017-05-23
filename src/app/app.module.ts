@@ -8,6 +8,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AuthModule } from './auth/auth.module';
 import { BooksModule } from './books/books.module';
 import { OrdersModule } from './orders/orders.module';
+import { MenusModule } from './menus/menus.module';
+import { DishesModule } from './dishes/dishes.module';
+import { KioskModule } from './kiosk/kiosk.module';
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -21,6 +24,9 @@ import { AppComponent } from './app.component';
     BooksModule,
     AuthModule,
     OrdersModule,
+    MenusModule,
+    DishesModule,
+    KioskModule,
     AppRoutingModule,
     NgbModule.forRoot()
   ],
