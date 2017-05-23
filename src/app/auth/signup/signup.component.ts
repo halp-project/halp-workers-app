@@ -13,10 +13,7 @@ export class SignupComponent implements OnInit {
   workerToSignUp: Worker = new Worker();
   roles = [
     'assistant',
-    'book',
-    'admin',
-    'food',
-    'kiosk'
+    'book'
   ];
   errorMessage: string = '';
 
@@ -30,7 +27,7 @@ export class SignupComponent implements OnInit {
   onSubmit() {
     this.authService.signUp(this.workerToSignUp)
       .then((response) => {
-        localStorage.setItem('id_token', response.json().id_token);
+        localStorage.setItem('id_token', response.json().token);
         this.routingByRole(this.workerToSignUp.role);
       })
       .catch((error: any) => {
@@ -58,16 +55,6 @@ export class SignupComponent implements OnInit {
 
       case 'admin': {
         this.router.navigate(['patients']);
-        break;
-      }
-
-      case 'kiosk': {
-        this.router.navigate(['kiosk']);
-        break;
-      }
-
-      case 'food': {
-        this.router.navigate(['menus']);
         break;
       }
     }
