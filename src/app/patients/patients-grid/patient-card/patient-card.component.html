@@ -1,0 +1,56 @@
+<div class="card">
+  <div class="patient-image-box">
+    <img class="card-img-top patient-image" [src]='patient.image' alt="Card image cap">
+  </div>
+  <div class="card-block">
+    <h4 class="card-title">{{ patient.id }} {{ patient.name }}</h4>
+    <p class="card-text">{{ patient.description }}</p>
+    <button (click)="edit(content)" type="button" class="btn btn-primary">
+      <i class="fa fa-pencil" aria-hidden="true"></i> Edit
+    </button>
+    <button (click)="delete()" type="button" class="btn btn-danger">
+      <i class="fa fa-trash-o" aria-hidden="true"></i> Delete
+    </button>
+  </div>
+</div>
+
+<template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">Edit patient</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" [value]="patient.name" required>
+      </div>
+      <div class="form-group">
+        <label for="age">Age</label>
+        <input type="text" class="form-control" id="age" [value]="patient.age" required>
+      </div>
+      <div class="form-group">
+        <label for="id">ID</label>
+        <input type="text" class="form-control" id="id" [value]="patient.id" required>
+      </div>
+      <div class="form-group">
+        <label for="description">Description</label>
+        <input type="text" class="form-control" id="description" [value]="patient.description" required>
+      </div>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" class="form-control" id="username" [value]="patient.username" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="text" class="form-control" id="password" [value]="patient.password" required>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="c('Close click')">Close</button>
+    <button type="button" class="btn btn-success" (click)="c('Close click')">Save</button>
+  </div>
+</template>

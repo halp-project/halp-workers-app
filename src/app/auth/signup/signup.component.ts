@@ -13,7 +13,10 @@ export class SignupComponent implements OnInit {
   workerToSignUp: Worker = new Worker();
   roles = [
     'assistant',
-    'book'
+    'book',
+    'admin',
+    'food',
+    'kiosk'
   ];
   errorMessage: string = '';
 
@@ -55,6 +58,16 @@ export class SignupComponent implements OnInit {
 
       case 'admin': {
         this.router.navigate(['patients']);
+        break;
+      }
+
+      case 'kiosk': {
+        this.router.navigate(['kiosk']);
+        break;
+      }
+
+      case 'food': {
+        this.router.navigate(['menus']);
         break;
       }
     }
