@@ -1,0 +1,9 @@
+<div class="activity-content">
+  <div class="container-fluid activity-container">
+    <div class="row">
+      <div class="col-3 col-centered patient-box" *ngFor="let patient of patients">
+        <app-patient-card [patient]="patient" (_delete)="deletePatient($patientId)" (_edit)="editPatient($patient)"></app-patient-card>
+      </div>
+    </div>
+  </div>
+</div>

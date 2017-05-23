@@ -1,0 +1,63 @@
+<div class="card">
+  <div class="card-header content">
+    <div id="date-box">
+      <h5>{{menu.date}}</h5><h4 style="padding-left:  20pt">Today's Menu</h4>
+    </div>
+    <div id="button-box">
+      <button (click)="edit(content)" type="button" class="btn btn-primary">
+      <i class="fa fa-pencil" aria-hidden="true"></i> Edit
+      </button>
+      <button (click)="delete()" type="button" class="btn btn-danger">
+        <i class="fa fa-trash-o" aria-hidden="true"></i> Delete
+      </button>
+    </div>
+  </div>
+  <div class="card-block">
+    <ul class="list-group">
+      <li class="list-group-item"><h5> Starters: </h5>
+        <span class="badge badge-pill badge-primary myBadges" *ngFor="let d of menu.firstDish">{{d.name}}</span></li>
+      <li class="list-group-item"><h5> Main dishes: </h5>
+        <span class="badge badge-pill badge-primary myBadges" *ngFor="let d of menu.secondDish">{{d.name}}</span></li>
+      <li class="list-group-item"><h5> Desserts: </h5>
+        <span class="badge badge-pill badge-primary myBadges" *ngFor="let d of menu.dessert">{{d.name}}</span></li>
+    </ul>
+    
+  </div>
+</div>
+
+<template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">Edit menu</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="form-group">
+        <label for="id">ID</label>
+        <input type="number" class="form-control" id="id" [value]="menu.id" required>
+      </div>
+      <div class="form-group">
+        <label for="title">Date</label>
+        <input type="date" class="form-control" id="date" [value]="menu.date" required>
+      </div>
+      <div class="form-group">
+        <label for="title">Starters</label>
+        <input type="text" class="form-control" id="starters" required>
+      </div>
+      <div class="form-group">
+        <label for="title">Main dishes</label>
+        <input type="text" class="form-control" id="main-dishes" required>
+      </div>
+      <div class="form-group">
+        <label for="title">Desserts</label>
+        <input type="text" class="form-control" id="dessert" required>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="c('Close click')">Close</button>
+    <button type="button" class="btn btn-success" (click)="c('Close click')">Save</button>
+  </div>
+</template>
