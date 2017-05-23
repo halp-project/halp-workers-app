@@ -25,6 +25,10 @@ export class BookCardComponent implements OnInit {
     this.bookService.deleteBook(this.book.id);
     location.reload();
   }
+   
+   edit() {
+    location.reload();
+  }
 
 /*
   edit(content) {
