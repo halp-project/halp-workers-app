@@ -27,10 +27,6 @@
   <div class="modal-body">
     <form>
 
-      <div class="form-group">
-        <label for="id">ID</label>
-        <input #id type="text" class="form-control" id="id" [value]="book.id" required>
-      </div>
 
       <div class="form-group">
         <label for="title">Title</label>
@@ -52,7 +48,7 @@
   </div>
   <div class="modal-footer">
     <button type="button" class="btn btn-secondary" (click)="c('Close click')">Close</button>
-    <button type="button" class="btn btn-success" (click)="onSubmit(id.value, title.value, author.value,
+    <button type="button" class="btn btn-success" (click)="onSubmit(title.value, author.value,
         description.value, image.value); c('Close click')">Save</button>
   </div>
 </ng-template>
