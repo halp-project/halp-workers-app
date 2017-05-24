@@ -27,9 +27,7 @@ export class BooksGridComponent implements OnInit, OnChanges {
     }
   }
 
-
-  deleteBook(bookId) {
-    console.log(bookId);
+  deleteBook(bookId: any) {
     this.books.splice(bookId, 1);
   }
 

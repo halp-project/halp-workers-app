@@ -50,4 +50,12 @@ export class OrderItemComponent implements OnInit {
     }
   }
 
+  getTitleButton(){
+    if(this.order.completed) {
+      return "Undo";
+    } else {
+      return "Complete";
+    }
+  }
+
 }

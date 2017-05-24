@@ -51,6 +51,16 @@ export class LoginComponent implements OnInit {
         this.router.navigate(['patients']);
         break;
       }
+
+      case 'food': {
+        this.router.navigate(['menus']);
+        break;
+      }
+
+      case 'kiosk': {
+        this.router.navigate(['kiosk']);
+        break;
+      }
     }
   }
 

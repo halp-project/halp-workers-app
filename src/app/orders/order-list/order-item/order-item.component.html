@@ -23,10 +23,10 @@
       </div>
 
       <div class="field col">
-        <button (click)="action()" type="button" [class]="getButtonClass()">
+        <button (click)="action()" type="button" [class]="getButtonClass()" [title]="getTitleButton()">
           <i [class] = "getButtonImg()"></i>
         </button>
-        <button (click)="delete()" type="button" class="btn btn-danger">
+        <button (click)="delete()" type="button" class="btn btn-danger" title="Delete Order">
           <i class="fa fa-trash-o"></i>
         </button>
       </div>

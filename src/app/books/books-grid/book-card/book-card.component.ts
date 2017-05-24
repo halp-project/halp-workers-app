@@ -23,7 +23,6 @@ export class BookCardComponent implements OnInit {
   }
 
   delete() {
-    console.log(this.book.id);
     this.bookService.deleteBook(this.book.id);
     location.reload();
   }
