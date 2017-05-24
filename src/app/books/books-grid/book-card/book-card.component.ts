@@ -28,8 +28,7 @@ export class BookCardComponent implements OnInit {
     location.reload();
   }
 
-  onSubmit(id, title, author, description, image) {
-    this.book.id=id;
+  onSubmit(title, author, description, image) {
     this.book.title=title;
     this.book.author=author;
     this.book.description=description;
