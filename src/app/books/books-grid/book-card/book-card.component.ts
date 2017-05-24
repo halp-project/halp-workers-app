@@ -14,6 +14,8 @@ export class BookCardComponent implements OnInit {
   @Input() book: Book;
   @Output() _delete: EventEmitter<number> = new EventEmitter();
   closeResult: string;
+  submitted = false;
+  newBook: Book;
 
   constructor(private bookService: BookService, private modalService: NgbModal) { }
 
@@ -24,6 +26,17 @@ export class BookCardComponent implements OnInit {
     console.log(this.book.id);
     this.bookService.deleteBook(this.book.id);
     location.reload();
+  }
+
+  onSubmit(id, title, author, description, image) {
+    this.book.id=id;
+    this.book.title=title;
+    this.book.author=author;
+    this.book.description=description;
+    this.book.image=image;
+    this.bookService.editBook(this.book.id, this.book);
+    location.reload();
+    this.submitted = true;
   }
 
   edit(content) {
