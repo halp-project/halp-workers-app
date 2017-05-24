@@ -13,9 +13,9 @@ export class BookCardComponent implements OnInit {
 
   @Input() book: Book;
   @Output() _delete: EventEmitter<number> = new EventEmitter();
-  /*closeResult: string;*/
+  closeResult: string;
 
-  constructor(private bookService: BookService) { }
+  constructor(private bookService: BookService, private modalService: NgbModal) { }
 
   ngOnInit() {
   }
@@ -26,19 +26,13 @@ export class BookCardComponent implements OnInit {
     location.reload();
   }
 
-  edit() {
-    location.reload();
-  }
-
-/*
-
   edit(content) {
     this.modalService.open(content).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;
     }, (reason) => {
       this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
     });
-  }*/
+  }
 
   private getDismissReason(reason: any): string {
     if (reason === ModalDismissReasons.ESC) {
