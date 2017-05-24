@@ -15,23 +15,14 @@ export class BookService {
     const url = this.booksUrl;
 
     return this.http
-      .get(url)
-      .toPromise()
-      .then(response => {
-        let books: Book[] = [];
-        let b : Book;
-        for(let i = 0; i < response.json().data.length; i ++) {
-          b = new Book(response.json().data[i].id,
-                        response.json().data[i].title,
-                        response.json().data[i].author,
-                        response.json().data[i].description,
-                        response.json().data[i].image);
-          books.push(b);
-        }
-        return books as Book[];
-      })
-      .catch(this.handleError);
-  }
+       .get(url)
+       .toPromise()
+       .then((response) => {
+         console.log(response);
+         return response.json().data as Book[];
+       })
+       .catch(this.handleError);
+   }
 
   postBook(book: any): Promise<Book> {
     const headers = new Headers({
