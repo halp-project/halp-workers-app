@@ -12,6 +12,7 @@ import { MenusModule } from './menus/menus.module';
 import { DishesModule } from './dishes/dishes.module';
 import { KioskModule } from './kiosk/kiosk.module';
 import { AppComponent } from './app.component';
+import { PatientsModule } from './patients/patients.module';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { AppComponent } from './app.component';
     MenusModule,
     DishesModule,
     KioskModule,
+    PatientsModule,
     AppRoutingModule,
     NgbModule.forRoot()
   ],
