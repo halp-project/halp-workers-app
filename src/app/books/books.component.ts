@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges, SimpleChange } from '@angular/core';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 
 import { Book } from './books-grid/book';
@@ -15,10 +15,33 @@ export class BooksComponent implements OnInit {
   id = 7;
   submitted = false;
 
+  bookList: Book[] = [];
+
+  error: any;
+
   constructor(private modalService: NgbModal, private bookService: BookService) { }
 
-  ngOnInit() {
+  getBooks(): void{
+    this.bookService.getBooks()
+      .then(books => {
+        for(let i = 0; i < books.length; i++) {
+          this.bookList.push(books[i]);
+        }
+      })
+      .catch(error => this.error = error);
   }
+
+  ngOnInit() {
+    this.getBooks();
+  }
+
+  ngOnChanges(changes: {[propKey: string]: SimpleChange}) {
+    this.getBooks();
+  }
+
+  /*onSubmit() { this.submitted = true; }*/
+
+
 
   onSubmit(title, author, description, image) {
     this.newBook=new Book(1, title, author, description, image);

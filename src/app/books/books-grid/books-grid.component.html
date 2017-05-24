@@ -1,7 +1,20 @@
 <div class="activity-content">
+
   <div class="container-fluid activity-container">
+
     <div class="col-3 col-centered book-box" *ngFor="let book of books">
-      <app-book-card [book]="book" (eventDelete)="deleteBook($bookId)"></app-book-card>
+
+
+
+
+      <app-book-card [book]="book" (_delete)="deleteBook($bookId)"></app-book-card>
+
+
+
+
+
     </div>
+
   </div>
+
 </div>

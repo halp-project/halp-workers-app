@@ -1,7 +1,7 @@
-import { Component, OnInit, Input, OnChanges, SimpleChange } from '@angular/core';
+import { Component, OnInit, Input, Output, OnChanges, SimpleChange, EventEmitter } from '@angular/core';
+
 
 import { Book } from './book';
-import { BookService } from '../book.service';
 
 @Component({
   selector: 'app-books-grid',
@@ -10,24 +10,15 @@ import { BookService } from '../book.service';
 })
 export class BooksGridComponent implements OnInit, OnChanges {
 
-  @Input() newBook: Book;
-  books: Book[];
-  error: any;
+  @Input() books: Book[];
+  /*error: any;*/
 
-  constructor(private bookService: BookService) { }
-
-  getBooks(): void{
-    this.bookService.getBooks()
-      .then(books => this.books = books)
-      .catch(error => this.error = error);
-  }
+  constructor() { }
 
   ngOnInit() {
-    this.getBooks();
   }
 
   ngOnChanges(changes: {[propKey: string]: SimpleChange}) {
-    this.getBooks();
     for (let propertyName in changes) {
       let changedProperty = changes[propertyName];
       if (!changedProperty.isFirstChange()) {
@@ -39,4 +30,5 @@ export class BooksGridComponent implements OnInit, OnChanges {
   deleteBook(bookId: any) {
     this.books.splice(bookId, 1);
   }
+
 }

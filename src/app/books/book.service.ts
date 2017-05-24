@@ -35,6 +35,32 @@ export class BookService {
       .catch(this.handleError);
   }
 
+  editBook(id: number, book: Book): Promise<any> {
+    const url = this.booksUrl+"/"+id;
+    const headers = new Headers({
+      'Content-Type': 'application/json'
+    });
+    var res;
+    return this.http
+      .put(url, book)
+      .toPromise()
+      .then(() => "done")
+      .catch(this.handleError);
+  }
+
+  deleteBook(id: number): Promise<any> {
+    const url = this.booksUrl+"/"+id;
+    const headers = new Headers({
+      'Content-Type': 'application/json'
+    });
+    var res;
+    return this.http
+      .delete(url)
+      .toPromise()
+      .then(() => "done")
+      .catch(this.handleError);
+  }
+
   private handleError(error: any): Promise<any> {
     console.error('An error occurred', error);
     return Promise.reject(error.message || error);
