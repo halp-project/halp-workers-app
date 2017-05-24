@@ -58,7 +58,6 @@ export class SignupComponent implements OnInit {
 
       case 'admin': {
         this.router.navigate(['patients']);
-        console.log("Eeeo")
         break;
       }
 

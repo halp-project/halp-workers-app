@@ -18,7 +18,6 @@ export class BookService {
       .get(url)
       .toPromise()
       .then((response) => {
-        console.log(response);
         return response.json().data as Book[];
       })
       .catch(this.handleError);

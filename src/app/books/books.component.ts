@@ -22,7 +22,6 @@ export class BooksComponent implements OnInit {
 
   onSubmit(title, author, description, image) {
     this.newBook=new Book(1, title, author, description, image);
-    console.log(JSON.stringify(this.newBook));
     this.bookService.postBook(JSON.stringify({ title: title, author: author, description: description, image: image }));
     location.reload();
     this.submitted = true;
