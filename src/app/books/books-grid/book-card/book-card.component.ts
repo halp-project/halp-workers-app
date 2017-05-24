@@ -19,7 +19,6 @@ export class BookCardComponent implements OnInit {
   }
 
   delete() {
-    console.log(this.book.id);
     var i = this.book.id;
     this.eventDelete.emit(i);
   }
